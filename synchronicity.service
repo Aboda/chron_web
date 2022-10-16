@@ -6,10 +6,8 @@ After=network.target
 Environment=PATH=/usr/bin:/usr/local/bin:/snap/bin
 Environment=NODE_ENV=production
 Restart=always
-User=nobody
-Group=nogroup
 WorkingDirectory=/home/andthenbeyond/synch_web/
-ExecStart=/usr/bin/node /home/andthenbeyond/synch_web/main.js
+ExecStart=/usr/bin/node /home/andthenbeyond/synch_web/server.js
 StartLimitInterval=3
 StartLimitBurst=1
 
