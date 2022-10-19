@@ -195,26 +195,26 @@
         }
     },
     "domains":{
-        "sinchronicity.cloud":{
+        "synchronicity.cloud":{
             "favicon.ico":{
-                "loc":"https://sinchronicity.cloud/favicon.ico",
+                "loc":"https://synchronicity.cloud/favicon.ico",
                 "special":"favicon",
                 "route":"./basic.ico"
             },
             "robots.txt":{
-                "loc":"https://sinchronicity.cloud/robots.txt",
+                "loc":"https://synchronicity.cloud/robots.txt",
                 "special":"robots"
             },
             "sitemap.xml":{
-                "loc":"https://sinchronicity.cloud/sitemap.xml",
+                "loc":"https://synchronicity.cloud/sitemap.xml",
                 "special":"sitemap"
             },
             "index.html":{
-                "loc":"https://sinchronicity.cloud/index.html",
+                "loc":"https://synchronicity.cloud/index.html",
                 "special":"index"
             },
             "/":{
-                "loc":"https://sinchronicity.cloud/",
+                "loc":"https://synchronicity.cloud/",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -237,7 +237,7 @@
                 ]
             },
             "blog":{
-                "loc":"https://demian.app/blog",
+                "loc":"https://synchronicity.cloud/blog",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -265,7 +265,7 @@
                 ]
             },
             "aboutme":{
-                "loc":"https://demian.app/aboutme",
+                "loc":"https://synchronicity.cloud/aboutme",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -293,7 +293,7 @@
                 ]
             },
             "soma":{
-                "loc":"https://demian.app/soma",
+                "loc":"https://synchronicity.cloud/soma",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -320,7 +320,7 @@
                 ]
             },
             "antojitos":{
-                "loc":"https://demian.app/antojitos",
+                "loc":"https://synchronicity.cloud/antojitos",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -348,7 +348,7 @@
                 ]
             },
             "trajectory":{
-                "loc":"https://demian.app/trajectory",
+                "loc":"https://synchronicity.cloud/trajectory",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -376,7 +376,7 @@
                 ]
             },
             "projects":{
-                "loc":"https://demian.app/projects",
+                "loc":"https://synchronicity.cloud/projects",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -404,7 +404,7 @@
                 ]
             },
             "schedule":{
-                "loc":"https://demian.app/schedule",
+                "loc":"https://synchronicity.cloud/schedule",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -432,7 +432,7 @@
                 ]
             },
             "appform":{
-                "loc":"https://demian.app/appform",
+                "loc":"https://synchronicity.cloud/appform",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -460,7 +460,7 @@
                 ]
             },
             "info":{
-                "loc":"https://demian.app/info",
+                "loc":"https://synchronicity.cloud/info",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -488,7 +488,7 @@
                 ]
             },
             "services":{
-                "loc":"https://demian.app/services",
+                "loc":"https://synchronicity.cloud/services",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -516,7 +516,7 @@
                 ]
             },
             "developer":{
-                "loc":"https://demian.app/developer",
+                "loc":"https://synchronicity.cloud/developer",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -544,7 +544,7 @@
                 ]
             },
             "donate":{
-                "loc":"https://demian.app/donate",
+                "loc":"https://synchronicity.cloud/donate",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -572,7 +572,7 @@
                 ]
             },
             "message":{
-                "loc":"https://demian.app/message",
+                "loc":"https://synchronicity.cloud/message",
                 "sitemap":true,
                 "index":true,
                 "title":{
@@ -597,225 +597,6 @@
                     "./parts/beta_nav.js",
                     "./parts/plp_sidebar.js",
                     "./pages/d_message.js"
-                ]
-            }
-        },
-        "remansonocturno.com":{
-            "robots.txt":{
-                "loc":"https://remansonocturno.com/robots.txt",
-                "special":"robots"
-            },
-            "sitemap.xml":{
-                "loc":"https://remansonocturno.com/sitemap.xml",
-                "special":"sitemap"
-            },
-            "index.html":{
-                "loc":"https://remansonocturno.com/index.html",
-                "special":"index"
-            },
-            "favicon.ico":{
-                "loc":"https://remansonocturno.com/favicon.ico",
-                "special":"favicon",
-                "route":"./parts/ren_icons/ren_favicon.ico"
-            },
-            "/":{
-                "title":{
-                    "es":"Inicio:Remanso Nocturno",
-                    "en":"Home:Nocturnal Haven"
-                },
-                "short":{
-                        "es":"Portada y Noticias",
-                        "en":"News and welcome screen"
-                    },
-                "descrip":{
-                    "es":"Información de la red de páginas de Remanso Nocturno",
-                    "en":"Nocturnal Haven network information"
-                },
-                "loc":"https://remansonocturno.com/",
-                "sitemap":true,
-                "index":true,
-                "gtag":"ren_gtag",
-                "css":[
-                    "./parts/ren.css",
-                    "./parts/sdb.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./pages/r_root.js"
-                ]
-            },
-            "blog":{
-                "title":{
-                    "es":"Blog:Remanso Nocturno",
-                    "en":"Blog:Nocturnal Haven"
-                },
-                "short":{
-                        "es":"Blog Creativo",
-                        "en":"Creative Blog"
-                    },
-                "descrip":{
-                    "es":"Ficción de autores temas y estilos variados",
-                    "en":"Fiction of varied authors subjects and kinds"
-                },
-                "loc":"https://remansonocturno.com/blog",
-                "sitemap":true,
-                "index":true,
-                "gtag":"ren_gtag",
-                "css":[
-                    "./parts/ren.css",
-                    "./parts/sdb.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./pages/r_blog.js"
-                ]
-            }
-        },
-        "neorrey.art":{
-            "robots.txt":{
-                "loc":"https://neorrey.art/robots.txt",
-                "special":"robots"
-            },
-            "sitemap.xml":{
-                "loc":"https://neorrey.art/sitemap.xml",
-                "special":"sitemap"
-            },
-            "index.html":{
-                "loc":"https://neorrey.art/index.html",
-                "special":"index"
-            },
-            "favicon.ico":{
-                "loc":"https://neorrey.art/favicon.ico",
-                "special":"favicon",
-                "route":"./parts/ren_icons/ren_favicon.ico"
-            },
-            "/":{
-                "title":{
-                    "es":"Inicio:Remanso Nocturno",
-                    "en":"Home:Nocturnal Haven"
-                },
-                "short":{
-                        "es":"Portada y Noticias",
-                        "en":"News and welcome screen"
-                    },
-                "descrip":{
-                    "es":"Información de la red de páginas de Remanso Nocturno",
-                    "en":"Nocturnal Haven network information"
-                },
-                "loc":"https://remansonocturno.com/",
-                "sitemap":true,
-                "index":true,
-                "gtag":"ren_gtag",
-                "css":[
-                    "./parts/ren.css",
-                    "./parts/sdb.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./pages/r_root.js"
-                ]
-            },
-            "blog":{
-                "title":{
-                    "es":"Blog:Remanso Nocturno",
-                    "en":"Blog:Nocturnal Haven"
-                },
-                "short":{
-                        "es":"Blog Creativo",
-                        "en":"Creative Blog"
-                    },
-                "descrip":{
-                    "es":"Ficción de autores temas y estilos variados",
-                    "en":"Fiction of varied authors subjects and kinds"
-                },
-                "loc":"https://remansonocturno.com/blog",
-                "sitemap":true,
-                "index":true,
-                "gtag":"ren_gtag",
-                "css":[
-                    "./parts/ren.css",
-                    "./parts/sdb.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./pages/r_blog.js"
-                ]
-            }
-        },
-        "senderoholistico.com":{
-            "robots.txt":{
-                "loc":"https://senderoholistico.com/robots.txt",
-                "special":"robots"
-            },
-            "sitemap.xml":{
-                "loc":"https://senderoholistico.com/sitemap.xml",
-                "special":"sitemap"
-            },
-            "index.html":{
-                "loc":"https://senderoholistico.com/index.html",
-                "special":"index"
-            },
-            "favicon.ico":{
-                "loc":"https://senderoholistico.com/favicon.ico",
-                "special":"favicon",
-                "route":"./parts/ren_icons/shl_favicon.ico"
-            },
-            "/":{
-                "title":{
-                    "es":"Sendero Holístico",
-                    "en":"Holistic Path"
-                },
-                "short":{
-                        "es":"Información general y bienvenida",
-                        "en":"General info and welcome screen"
-                    },
-                "descrip":{
-                    "es":"Sitio de exploración y reflexión al respecto de la vida",
-                    "en":"Website dedicated to exploration and reflection about life"
-                },
-                "loc":"https://senderoholistico.com/",
-                "sitemap":true,
-                "index":true,
-                "gtag":"shl_gtag",
-                "css":[
-                    "./parts/shl.css",
-                    "./parts/sdb.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./pages/r_root.js"
-                ]
-            },
-            "blog":{
-                "title":{
-                    "es":"Blog:Remanso Nocturno",
-                    "en":"Blog:Nocturnal Haven"
-                },
-                "short":{
-                        "es":"Blog Creativo",
-                        "en":"Creative Blog"
-                    },
-                "descrip":{
-                    "es":"Ficción de autores temas y estilos variados",
-                    "en":"Fiction of varied authors subjects and kinds"
-                },
-                "loc":"https://remansonocturno.com/blog",
-                "sitemap":true,
-                "index":true,
-                "gtag":"ren_gtag",
-                "css":[
-                    "./parts/ren.css",
-                    "./parts/sdb.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./pages/r_blog.js"
                 ]
             }
         }
