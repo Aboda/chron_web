@@ -41,7 +41,8 @@ function build_headbar(){
     appname_container.append(ao.qq({
         "id":"appname",
         "nodetype":"p",
-        "innerText":"Synchronicity"
+        "innerText":"Synchronicity",
+        "styles":["half_space_left"]
     }))
 
     headbar.append(appname_container)
