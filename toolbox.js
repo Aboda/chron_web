@@ -119,10 +119,8 @@
             ${circle_pass.templates.html_meta_defaults()}
             ${circle_pass.templates.html_description(params.descrip[report.lng])}
             ${circle_pass.templates.html_title(params.title[report.lng])}
-            ${circle_pass.templates.base_head_google_tag_manager(circle_pass.tags[params.gtag])}
             </head>
             <body>
-            ${circle_pass.templates.base_body_google_tag_manager(circle_pass.tags[params.gtag])}
             </body>
             <style>
             ${circle_pass.templates.add_arrays(params.css,circle_pass,report.repage)}
