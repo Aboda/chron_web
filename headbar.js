@@ -38,16 +38,23 @@ function build_headbar(){
     }))
 
     headbar.append(appname_container)
+
+    let links_container = ao.qq({
+        "nodetype":"div",
+        "styles":["link_list"]
+    })
   
     for (let lnk of links){
-        headbar.append(ao.qq({
+        links_container.append(ao.qq({
             "nodetype":"div",
             "innerText":lnk[lng_index],
             "arb-target":lnk[2],
             "styles":["internal_nav_button"]
         }))
     }
-    
+
+    headbar.append(links_container)
+
     document.body.append(headbar)
 }
 
