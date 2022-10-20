@@ -70,6 +70,7 @@ const ao = {
       "value":true,
       "for":true,
       "title":true,
+      "href":true,
       "order":"style",
       "height":"style",
       "width":"style",

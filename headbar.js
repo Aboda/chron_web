@@ -28,7 +28,7 @@ function build_headbar(){
         "id":"appname_container",
         "nodetype":"div",
         "innerText":"Synchronicity",
-        "styles":["on_flex_left"]
+        "styles":["internal_nav_button"]
     })
 
     appname_container.append(ao.qq({
