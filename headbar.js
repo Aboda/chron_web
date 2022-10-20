@@ -19,10 +19,25 @@ function build_headbar(){
     assert_lng_index()
     
     let headbar = ao.qq({
-        "name":"headbar",
+        "id":"headbar",
         "nodetype":"div",
         "styles":["color_contrast_1","top_header_bar"]
     })
+
+    let appname_container = ao.qq({
+        "id":"appname_container",
+        "nodetype":"div",
+        "innerText":"Synchronicity",
+        "styles":["on_flex_left"]
+    })
+
+    appname_container.append(ao.qq({
+        "id":"app_icon",
+        "nodetype":"img",
+        "href":"https//:synchronicity.cloud/favicon.ico"
+    }))
+
+    headbar.append(appname_container)
   
     for (let lnk of links){
         headbar.append(ao.qq({

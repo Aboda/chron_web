@@ -16,5 +16,9 @@
 }
 
 .internal_nav_button{
-    border:1rem;
+    margin:1rem;
+}
+
+.on_flex_left{
+    align-self:flex-start;
 }
