@@ -33,12 +33,12 @@ function build_headbar(){
     appname_container.append(ao.qq({
         "id":"app_icon",
         "nodetype":"img",
-        "href":"https://synchronicity.cloud/favicon.ico"
+        "src":"https://synchronicity.cloud/favicon.ico"
     }))
 
     appname_container.append(ao.qq({
         "id":"appname",
-        "id":"p",
+        "nodetype":"p",
         "innerText":"Synchronicity"
     }))
 

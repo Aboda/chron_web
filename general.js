@@ -71,6 +71,7 @@ const ao = {
       "for":true,
       "title":true,
       "href":true,
+      "src":true,
       "order":"style",
       "height":"style",
       "width":"style",
