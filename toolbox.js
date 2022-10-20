@@ -233,370 +233,59 @@
                     "./general.css"
                 ],
                 "js":[
-                    "./general.js"
+                    "./general.js",
+                    "./headbar.js",
+                    "./home.js"
                 ]
             },
-            "blog":{
-                "loc":"https://synchronicity.cloud/blog",
+            "terms_of_service":{
+                "loc":"https://synchronicity.cloud/terms_of_service",
                 "sitemap":true,
                 "index":true,
                 "title":{
-                    "es":"Blog:PLP",
-                    "en":"Blog:PLP"
+                    "es":"Synchronicity Terminos del Servicio",
+                    "en":"Synchronicity Terms of Service"
                 },
                 "short":{
-                    "es":"Blog de tecnología",
-                    "en":"Tech Blog"
+                    "es":"ToS",
+                    "en":"ToS"
                 },
                 "descrip":{
-                    "es":"Página principal de mi blog de tecnología y trabajo",
-                    "en":"Main page of my technology and work blog"
+                    "es":"Terminos del servicio proveido por Synchronicity",
+                    "en":"Terms of service provided by Synchronicity"
                 },
-                "gtag":"plp_gtag",
                 "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
+                    "./general.css"
                 ],
                 "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_blog.js"
+                    "./general.js",
+                    "./headbar.js",
+                    "./tos.js"
                 ]
             },
-            "aboutme":{
-                "loc":"https://synchronicity.cloud/aboutme",
+            "privacy_policy":{
+                "loc":"https://synchronicity.cloud/privacy_policy",
                 "sitemap":true,
                 "index":true,
                 "title":{
-                    "es":"Acerca de mi:PLP",
-                    "en":"About me:PLP"
+                    "es":"Politica de Privacidad",
+                    "en":"Privacy policy"
                 },
                 "short":{
-                    "es":"Acerca de mi",
-                    "en":"About me"
+                    "es":"PP",
+                    "en":"PP"
                 },
                 "descrip":{
-                    "es":"Aquí hablo de mi mismo",
-                    "en":"Here I talk about myself"
+                    "es":"Politica de Privacidad de Synchronicity",
+                    "en":"Synchronicity Privacy Policy"
                 },
-                "gtag":"plp_gtag",
                 "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
+                    "./general.css"
                 ],
                 "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_aboutme.js"
-                ]
-            },
-            "soma":{
-                "loc":"https://synchronicity.cloud/soma",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"soma",
-                    "en":"soma"
-                },
-                "short":{
-                    "es":"Administrador Social",
-                    "en":"Social Manager"
-                },
-                "descrip":{
-                    "es":"Herramienta para curar contenido y distribuirlo en redes sociales.",
-                    "en":"Content curation and social media distribution tool."
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./pages/d_soma.js"
-                ]
-            },
-            "antojitos":{
-                "loc":"https://synchronicity.cloud/antojitos",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"Antojitos",
-                    "en":"Antojitos"
-                },
-                "short":{
-                    "es":"Aplicación para comercio local de alimentos",
-                    "en":"Local food commerce app"
-                },
-                "descrip":{
-                    "es":"Esta aplicación permite el generar y localizar registros de productores de antojitos para realizarles pedidos locales",
-                    "en":"This app allows for the creation of snack productors records to perform local purchases requests"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_antojitos.js"
-                ]
-            },
-            "trajectory":{
-                "loc":"https://synchronicity.cloud/trajectory",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"Trayectoria",
-                    "en":"Trajectory"
-                },
-                "short":{
-                    "es":"Historial profesional y academico",
-                    "en":"Work and education history"
-                },
-                "descrip":{
-                    "es":"Datos de historial laboral y educativo navegable por año y actividades",
-                    "en":"Year and subject browsable work and education history"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_trajectory.js"
-                ]
-            },
-            "projects":{
-                "loc":"https://synchronicity.cloud/projects",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"Proyectos",
-                    "en":"Projects"
-                },
-                "short":{
-                    "es":"Proyectos personales",
-                    "en":"Personal Proyects"
-                },
-                "descrip":{
-                    "es":"Aqui converso en general de los diversos intereses y persecuciones en los que me encuentro, analiso y comparto perspectivas de los mismos",
-                    "en":"Here I review the projects I am involved with, I perform analisis and commentary on them"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_projects.js"
-                ]
-            },
-            "schedule":{
-                "loc":"https://synchronicity.cloud/schedule",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"Agenda",
-                    "en":"Schedule"
-                },
-                "short":{
-                    "es":"Herramienta de administración de agenda de consultoria",
-                    "en":"Consulting schedule control tool"
-                },
-                "descrip":{
-                    "es":"Herramienta de adiministración de horarios de agenda para la consultoría",
-                    "en":"Schedule control for consulting services"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_schedule.js"
-                ]
-            },
-            "appform":{
-                "loc":"https://synchronicity.cloud/appform",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"Consultapp",
-                    "en":"AppConsult"
-                },
-                "short":{
-                    "es":"Aplicación de estimación de costo de desarrollo de app",
-                    "en":"Interactive app quote builder app"
-                },
-                "descrip":{
-                    "es":"Esta herramienta le permitira estimar el tiempo y costo de desarrollo de una apliación basado en sus requerimientos",
-                    "en":"This tool helps you perform an estimation of the time and cost of development of an app based on your requirements"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_appform.js"
-                ]
-            },
-            "info":{
-                "loc":"https://synchronicity.cloud/info",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"PlatInfo",
-                    "en":"PlatInfo"
-                },
-                "short":{
-                    "es":"Información en vivo de la plataforma",
-                    "en":"Live platform information"
-                },
-                "descrip":{
-                    "es":"Información en vivo de la infraestructura y el proceso de desarrollo de esta plataforma",
-                    "en":"Live platform infrastructure and development information"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_info.js"
-                ]
-            },
-            "services":{
-                "loc":"https://synchronicity.cloud/services",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"Servicios",
-                    "en":"Services"
-                },
-                "short":{
-                    "es":"Servicios digitales y profesionales",
-                    "en":"Digital and professional services"
-                },
-                "descrip":{
-                    "es":"Aqui detallamos los productos manejados, tanto aplicativos en linea, como desarrollo y servicios de marketing de contenidos.",
-                    "en":"Here you can find details on my products; online applications, development and content marketing"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_services.js"
-                ]
-            },
-            "developer":{
-                "loc":"https://synchronicity.cloud/developer",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"DemDev",
-                    "en":"DemDev"
-                },
-                "short":{
-                    "es":"Proyectos de desarrollo activos",
-                    "en":"Active development proyects"
-                },
-                "descrip":{
-                    "es":"Aqui encontraras una reseña de los proyectos que estoy desarrollando y podrás ayudarme a probar algunos de ellos",
-                    "en":"Here you will find info on the projects I am developing and you will be able to help me test some of them"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_dev.js"
-                ]
-            },
-            "donate":{
-                "loc":"https://synchronicity.cloud/donate",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"Donativo",
-                    "en":"Donation"
-                },
-                "short":{
-                    "es":"Página de donativos",
-                    "en":"Donations page"
-                },
-                "descrip":{
-                    "es":"Puedes realizar un donativo a mis esfuerzos de desarrollo independiente desde esta página",
-                    "en":"From this page you can perform a donation to my independent development efforts."
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_donate.js"
-                ]
-            },
-            "message":{
-                "loc":"https://synchronicity.cloud/message",
-                "sitemap":true,
-                "index":true,
-                "title":{
-                    "es":"Mensaje",
-                    "en":"Message"
-                },
-                "short":{
-                    "es":"Envíame un mensaje para iniciar contacto",
-                    "en":"Send me a message to initiate contact"
-                },
-                "descrip":{
-                    "es":"Envía un mensaje al autor de este sitio",
-                    "en":"Send a message to the author of this site"
-                },
-                "gtag":"plp_gtag",
-                "css":[
-                    "./parts/sdb.css",
-                    "./parts/plp.css"
-                ],
-                "js":[
-                    "./parts/alpha.js",
-                    "./parts/beta_nav.js",
-                    "./parts/plp_sidebar.js",
-                    "./pages/d_message.js"
+                    "./general.js",
+                    "./headbar.js",
+                    "./pp.js"
                 ]
             }
         }
