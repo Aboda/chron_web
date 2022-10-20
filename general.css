@@ -4,46 +4,12 @@
     background-color:rgb(66,28,82);
     color:rgb(255,255,255);
 }
-.color_contrast_2{
-    background-color:rgb(196,144,209);
-    color:rgb(255,255,255);
-}
-.color_contrast_3{
-    background-color:rgb(18,130,162);
-    color:rgb(255,255,255);
-}
-.color_contrast_4{
-    background-color:rgb(239,148,108);
-    color:rgb(0,0,0);
-}
-.color_contrast_5{
-    background-color:rgb(72,3,85);
-    color:rgb(255,255,255);
-}
-.grayed_out{
-    color:rgb(180,180,180);
-    background-color:rgb(180,180,180);
-}
-.full_bottom_button {
-    bottom:0px;
-    left:0px;
-    right:0px;
-    border-style:outset;
-    border-width:.2em;
-    border-color:grey;
-}
-.botopts{
-    margin: .7em;
-    padding: .3em;
-    transition: 0.5s;
-    border-width: .2em;
-    border-style: outset;
-    border-color: gray;
-    cursor: pointer;
-}
-.byemessage{
-    font-size: 85%;
-}
-.initial_proceed_button{
-    cursor:progress;
+
+.top_header_bar{
+    top:0;
+    width:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    height: 4rem;
 }

@@ -21,7 +21,7 @@ function build_headbar(){
     let headbar = ao.qq({
         "name":"headbar",
         "nodetype":"div",
-        "styles":["color_contrast_1"]
+        "styles":["color_contrast_1","top_header_bar"]
     })
   
     for (let lnk of links){
