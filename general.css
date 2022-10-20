@@ -11,5 +11,10 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
+    align-items: center;
     height: 4rem;
+}
+
+.internal_nav_button{
+    border:1rem;
 }

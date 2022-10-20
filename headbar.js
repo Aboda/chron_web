@@ -28,7 +28,8 @@ function build_headbar(){
         headbar.append(ao.qq({
             "nodetype":"div",
             "innerText":lnk[lng_index],
-            "arb-target":lnk[2]
+            "arb-target":lnk[2],
+            "styles":["internal_nav_button"]
         }))
     }
     
