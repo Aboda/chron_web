@@ -5,7 +5,6 @@ function build_headbar(){
         ["Privacy Agreement","Politica de Privacidad","https://synchronicity.cloud/privacy_policy"]
     ]
     
-    let lnk_index = 2
     let lng_index
     
     function assert_lng_index(){
@@ -24,26 +23,13 @@ function build_headbar(){
         "nodetype":"div",
         "styles":["color_contrast_1"]
     })
-    
-    let link_list = ao.qq({
-        "name":"link_list",
-        "nodetype":"li",
-    })
-    
-    headbar.append(link_list)
-    
+  
     for (let lnk of links){
-        let link = ao.qq({
-            "nodetype":"a",
-            "href":lnk[lnk_index],
-        })
-        
-        let insite_nav_text_button = ao.qq({
-            "nodetype":"p",
-            "innerText":lnk[lng_index]
-        })
-        link.append(insite_nav_text_button)
-        link_list.append(link)
+        headbar.append(ao.qq({
+            "nodetype":"div",
+            "innerText":lnk[lng_index],
+            "arb-target":lnk[2]
+        }))
     }
     
     document.body.append(headbar)
