@@ -27,14 +27,19 @@ function build_headbar(){
     let appname_container = ao.qq({
         "id":"appname_container",
         "nodetype":"div",
-        "innerText":"Synchronicity",
         "styles":["internal_nav_button"]
     })
 
     appname_container.append(ao.qq({
         "id":"app_icon",
         "nodetype":"img",
-        "href":"https//:synchronicity.cloud/favicon.ico"
+        "href":"https://synchronicity.cloud/favicon.ico"
+    }))
+
+    appname_container.append(ao.qq({
+        "id":"appname",
+        "id":"p",
+        "innerText":"Synchronicity"
     }))
 
     headbar.append(appname_container)
