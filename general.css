@@ -22,6 +22,10 @@
     cursor:pointer;
 }
 
+.internal_nav_button:hover{
+    background-color: blueviolet;
+}
+
 .half_space_left{
     margin-left:.5rem;
 }
@@ -42,4 +46,12 @@
 
 .antydisconfortbar{
     height: 5.2rem;
+}
+
+.entry_title{
+    margin: 5rem
+}
+
+.entry_text{
+    margin: 2rem
 }

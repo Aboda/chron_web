@@ -29,22 +29,25 @@ function build_tos() {
     let general_container = ao.qq({
         "nodetype":"div"
     })
+    
     for (let para of content.en.paragraphs) {
         let line_container = ao.qq({
             "nodetype":"div",
             "styles":["text_list"]
         })
-        
+
         general_container.append(line_container)
 
         line_container.append(ao.qq({
             "nodetype":"p",
-            "innerText":para[0]
+            "innerText":para[0],
+            "styles":["entry_title"]
         }))
 
         line_container.append(ao.qq({
             "nodetype":"p",
-            "innerText":para[1]
+            "innerText":para[1],
+            "styles":["entry_text"]
         }))
     }
     document.body.append(general_container)
