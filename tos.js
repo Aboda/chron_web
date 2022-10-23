@@ -66,7 +66,41 @@ function build_tos() {
     document.body.append(general_container)
 }
 
+function build_tos_table(){
+    let table = ao.qq({
+        "nodetype":"table",
+    })
+
+    for (let para of content.en.paragraphs) {
+        let row = ao.qq({
+            "nodetype":"tr"
+        })
+        table.append(row)
+        let title_cell = o.qq({
+            "nodetype":"td"
+        })
+        row.append(title_cell)
+        let content_cell = o.qq({
+            "nodetype":"td"
+        })
+        row.append(content_cell)
+
+        title_cell.append(ao.qq({
+            "nodetype":"p",
+            "innerText":para[1]
+        }))
+
+        content_cell.append(ao.qq({
+            "nodetype":"p",
+            "innerText":para[0]
+        }))
+
+    }
+
+    document.body.append(table)
+}
+
 window.onload = () => {
     build_headbar()
-    build_tos()
+    //build_tos()
 }
