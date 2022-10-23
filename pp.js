@@ -25,3 +25,7 @@ let content = {
         ]
     }    
 }
+
+window.onload = () => {
+    build_headbar()
+}
