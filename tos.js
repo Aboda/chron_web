@@ -55,6 +55,7 @@ function build_tos(){
     let intro_cell = ao.qq({
         "nodetype":"td"
     })
+    intro_row.append(intro_cell)
 
     intro_cell.append(ao.qq({
         "nodetype":"p",
