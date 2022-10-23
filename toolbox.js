@@ -184,6 +184,16 @@
                 "special":"favicon",
                 "route":"./basic.ico"
             },
+            "midlogo.png":{
+                "loc":"https://synchronicity.cloud/midlogo.png",
+                "special":"favicon",
+                "route":"../Comp.png"
+            },
+            "largelogo.png":{
+                "loc":"https://synchronicity.cloud/largelogo.png",
+                "special":"favicon",
+                "route":"../Original.png"
+            },
             "robots.txt":{
                 "loc":"https://synchronicity.cloud/robots.txt",
                 "special":"robots"
