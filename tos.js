@@ -25,6 +25,32 @@ let content = {
     }    
 }
 
+function build_tos() {
+    let general_container = ao.qq({
+        "nodetype":"div"
+    })
+    for (let para of content.en.paragraphs) {
+        let line_container = ao.qq({
+            "nodetype":"div",
+            "styles":["text_list"]
+        })
+        
+        general_container.append(line_container)
+
+        line_container.append(ao.qq({
+            "nodetype":"p",
+            "innerText":para[0]
+        }))
+
+        line_container.append(ao.qq({
+            "nodetype":"p",
+            "innerText":para[1]
+        }))
+    }
+    document.body.append(general_container)
+}
+
 window.onload = () => {
     build_headbar()
+    build_tos()
 }
