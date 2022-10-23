@@ -76,11 +76,11 @@ function build_tos_table(){
             "nodetype":"tr"
         })
         table.append(row)
-        let title_cell = o.qq({
+        let title_cell = ao.qq({
             "nodetype":"td"
         })
         row.append(title_cell)
-        let content_cell = o.qq({
+        let content_cell = ao.qq({
             "nodetype":"td"
         })
         row.append(content_cell)
