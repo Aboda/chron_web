@@ -53,7 +53,7 @@ function build_tos() {
 
         let text_container = ao.qq({
             "nodetype":"div",
-            "width":window.innerWidth * .40 + "px"
+            "width":window.innerWidth * .60 + "px"
         })
         line_container.append(text_container)
 
