@@ -55,6 +55,8 @@ const ao = {
       "sub":true,
       "textarea":true,
       "table":true,
+      "tr":true,
+      "td":true,
       "ul":true,
       "ol":true,
       "li":true
