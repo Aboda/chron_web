@@ -38,18 +38,29 @@ function build_tos() {
 
         general_container.append(line_container)
 
-        line_container.append(ao.qq({
+        let title_container = ao.qq({
+            "nodetype":"div",
+            "styles":["text_list"],
+            "width":window.innerWidth * .30 + "px"
+        })
+        line_container.append(title_container)
+
+        title_container.append(ao.qq({
             "nodetype":"p",
             "innerText":para[0],
-            "styles":["entry_title"],
-            "width":window.innerWidth * .30
+            "styles":["entry_title"]
         }))
 
-        line_container.append(ao.qq({
+        let text_container = ao.qq({
+            "nodetype":"div",
+            "width":window.innerWidth * .40 + "px"
+        })
+        line_container.append(text_container)
+
+        text_container.append(ao.qq({
             "nodetype":"p",
             "innerText":para[1],
-            "styles":["entry_text"],
-            "width":window.innerWidth * .50
+            "styles":["entry_text"]
         }))
     }
     document.body.append(general_container)
