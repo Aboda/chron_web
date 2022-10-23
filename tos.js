@@ -87,12 +87,14 @@ function build_tos_table(){
 
         title_cell.append(ao.qq({
             "nodetype":"p",
-            "innerText":para[1]
+            "innerText":para[0],
+            "styles":["entry_title"]
         }))
 
         content_cell.append(ao.qq({
             "nodetype":"p",
-            "innerText":para[0]
+            "innerText":para[1],
+            "styles":["entry_text"]
         }))
 
     }
