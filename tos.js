@@ -41,13 +41,15 @@ function build_tos() {
         line_container.append(ao.qq({
             "nodetype":"p",
             "innerText":para[0],
-            "styles":["entry_title"]
+            "styles":["entry_title"],
+            "width":window.innerWidth * .30
         }))
 
         line_container.append(ao.qq({
             "nodetype":"p",
             "innerText":para[1],
-            "styles":["entry_text"]
+            "styles":["entry_text"],
+            "width":window.innerWidth * .50
         }))
     }
     document.body.append(general_container)

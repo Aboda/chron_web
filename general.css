@@ -49,9 +49,11 @@
 }
 
 .entry_title{
-    margin: 5rem
+    margin: 5rem;
+    font-size: 40px;
 }
 
 .entry_text{
-    margin: 2rem
+    margin: 2rem;
+    font-size: 18px;
 }
