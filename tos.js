@@ -102,5 +102,6 @@ function build_tos_table(){
 
 window.onload = () => {
     build_headbar()
+    build_tos_table()
     //build_tos()
 }
