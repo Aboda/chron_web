@@ -2,7 +2,7 @@ let content = {
     "en":{
         "title":"Terms of Service",
         "last_update":"In Revision",
-        "intro":"Thank you for your interest in Synchronicity, by using the Workpsace addOn you agree to these terms.",
+        "intro":"Thank you for your interest in Synchronicity the Workspace addOn for google calendar, by using the Workpsace addOn you agree to adhere to the following terms.",
         "paragraphs":[
             ["The application","Synchronicity is a Workspace Add On for Google Calendar (*The App*) that helps you generate shareable output (*The Output*) with the details of your calendar availability"],
             ["The use","Synchronicity performs an evaluation of the events in the indicated calendars and timerange looking for timeframes of a minimum length specified by the user, producing as output a short writing indicating available frames found"],
@@ -25,51 +25,43 @@ let content = {
     }    
 }
 
-function build_tos() {
+function build_tos(){
     let general_container = ao.qq({
         "nodetype":"div"
     })
-    
-    for (let para of content.en.paragraphs) {
-        let line_container = ao.qq({
-            "nodetype":"div",
-            "styles":["text_list"]
-        })
 
-        general_container.append(line_container)
+    let header = ao.qq({
+        "nodetype":"p",
+        "innerText":content.en.title,
+        "styles":["hitting_text"]
+    })
+    general_container.append(header)
 
-        let title_container = ao.qq({
-            "nodetype":"div",
-            "styles":["text_list"],
-            "width":window.innerWidth * .30 + "px"
-        })
-        line_container.append(title_container)
 
-        title_container.append(ao.qq({
-            "nodetype":"p",
-            "innerText":para[0],
-            "styles":["entry_title"]
-        }))
-
-        let text_container = ao.qq({
-            "nodetype":"div",
-            "width":window.innerWidth * .60 + "px"
-        })
-        line_container.append(text_container)
-
-        text_container.append(ao.qq({
-            "nodetype":"p",
-            "innerText":para[1],
-            "styles":["entry_text"]
-        }))
-    }
-    document.body.append(general_container)
-}
-
-function build_tos_table(){
     let table = ao.qq({
         "nodetype":"table",
     })
+    general_container.append(table)
+
+    let  intro_row = ao.qq({
+        "nodetype":"tr"
+    })
+    table.append(intro_row)
+    
+    intro_row.append(ao.qq({
+        "nodetype":"td"
+    }))
+    
+    let intro_cell = ao.qq({
+        "nodetype":"td"
+    })
+
+    intro_cell.append(ao.qq({
+        "nodetype":"p",
+        "styles":["entry_title"],
+        "innerText":content.en.intro
+    }))
+    
 
     for (let para of content.en.paragraphs) {
         let row = ao.qq({
@@ -99,11 +91,10 @@ function build_tos_table(){
 
     }
 
-    document.body.append(table)
+    document.body.append(general_container)
 }
 
 window.onload = () => {
     build_headbar()
-    build_tos_table()
-    //build_tos()
+    build_tos()
 }

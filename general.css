@@ -49,12 +49,14 @@
     height: 5.2rem;
 }
 
+.hitting_text{
+    font-size: 78px;
+}
+
 .entry_title{
-    margin: 5rem;
     font-size: 40px;
 }
 
 .entry_text{
-    margin: 2rem;
     font-size: 18px;
 }
