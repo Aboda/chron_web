@@ -1,5 +1,5 @@
 function build_big_image_container(){
-    window.body.append(ao.qq({
+    document.body.append(ao.qq({
         "nodetype":"img",
         "src":"https://synchronicity.cloud/midlogo.png"
     }))
