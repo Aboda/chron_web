@@ -3,9 +3,9 @@ let content = {
         "title":"Privacy Policy",
         "last_update":"In Revision",
         "paragraphs":[
-            ["Security","All access control is managed by Google Apps Scripts, no information is sent by the client to any server, all app communications happen via the user email and are freely observable"],
+            ["Security","All access control is managed by Google Apps Scripts, no information is sent by the client to any server."],
             ["Personal information","No information is automatically collected by the application. All queried information is evaluated on the spot by the addOn without communication with other backend that the Google data providing one. The exception is when creating a malfunction email report, in which case, the informattion attached is helpful to asses some malfunctions, and this process is manual and conducted by the user allowing for revision or censorship of the troubleshooting data." ],
-            ["Platform","The Google Apps Scripts Workspace addOn environment is used as provided to manage and service the application functionality, any and all metrics or tracking observed belong to this infrastructure, not the company behind Syncrhonicity"]
+            ["Platform","The Google Apps Scripts Workspace addOn environment is used as provided to manage and service the application functionality, any and all metrics or tracking observed belong to this infrastructure, not the company behind Syncrhonicity."]
         ]
     },
     "es":{

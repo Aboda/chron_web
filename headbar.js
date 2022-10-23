@@ -2,7 +2,7 @@ function build_headbar(){
     let links = [
         ["Home","Inicio","https://synchronicity.cloud/"],
         ["Terms of Service","Terminos del Servicio","https://synchronicity.cloud/terms_of_service"],
-        ["Privacy Agreement","Politica de Privacidad","https://synchronicity.cloud/privacy_policy"]
+        ["Privacy Policy","Politica de Privacidad","https://synchronicity.cloud/privacy_policy"]
     ]
     
     let lng_index
