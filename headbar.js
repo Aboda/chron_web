@@ -56,8 +56,8 @@ function build_headbar(){
         links_container.append(ao.qq({
             "nodetype":"div",
             "innerText":lnk[lng_index],
-            "arb-target":lnk[2],
-            "styles":["internal_nav_button"]
+            "styles":["internal_nav_button"],
+            "triggers":[["click",function(){window.location.href = lnk[2]}]]
         }))
     }
 
@@ -65,7 +65,3 @@ function build_headbar(){
 
     document.body.append(headbar)
 }
-
-window.onload = (event) => {
-    build_headbar()
-};
