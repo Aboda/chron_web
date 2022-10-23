@@ -64,4 +64,9 @@ function build_headbar(){
     headbar.append(links_container)
 
     document.body.append(headbar)
+    document.body.append(ao.qq({
+        "id":"antydisconfortbar",
+        "nodetype":"div",
+        "styles":["antydisconfortbar"]
+    }))
 }
