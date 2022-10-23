@@ -50,13 +50,16 @@
 }
 
 .hitting_text{
+    color: rgb(66,28,82);
     font-size: 78px;
 }
 
 .entry_title{
+    color: rgb(66,28,82);
     font-size: 40px;
 }
 
 .entry_text{
+    color: rgb(66,28,82);
     font-size: 18px;
 }

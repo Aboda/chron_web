@@ -4,6 +4,7 @@ let content = {
         "last_update":"In Revision",
         "intro":"Thank you for your interest in Synchronicity the Workspace addOn for google calendar, by using the Workpsace addOn you agree to adhere to the following terms.",
         "paragraphs":[
+            ["The service","Synchronicity is intended to assist sharing your google calendar availability in a simple and quick manner doing the evaluation of activities in a given date range and generating a simple text string that is easily understandable and compact."],
             ["The application","Synchronicity is a Workspace Add On for Google Calendar (*The App*) that helps you generate shareable output (*The Output*) with the details of your calendar availability"],
             ["The use","Synchronicity performs an evaluation of the events in the indicated calendars and timerange looking for timeframes of a minimum length specified by the user, producing as output a short writing indicating available frames found"],
             ["The output","The output is a short writing that presents a single line for each day with the month/day evaluated and the timeranges in which there is continuos availability"],
