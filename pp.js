@@ -4,16 +4,23 @@ let content = {
         "last_update":"In Revision",
         "paragraphs":[
             ["Privacy Policy.",`Synchronicity Cloud LLC (“Synchronicity”, “we”, or “us”) recognizes the importance of privacy. We want you to feel confident using our services, and this privacy notice (“Privacy Notice” or “Notice”) is to help you understand and describe how we collect, use, and disclose your information.
-            What information we collect and how it is collected
-            With whom we may share information
-            Legal basis for processing the information
-            Your rights and choices
-            Security and storage of the information
-            Third-party websites
-            Users outside the United States
-            CCPA Compliance
-            Changes to the Notice; and
-            Contacting Synchronicity
+            
+            *What information we collect and how it is collected
+            
+            *With whom we may share information
+            
+            *Legal basis for processing the information
+            
+            *Your rights and choices
+            
+            *Security and storage of the information
+            
+            *Third-party websites
+            
+            *Users outside the United States
+            
+            *Changes to the Notice
+
             Throughout this document, we will use a few terms to describe various products and roles. All of the text, data, information, software, graphics, photographs and more that we and our affiliates may make available to you, plus our websites and any services, plug-ins, software, or applications (including Synchronicity Click, Synchronicity for Chrome, Synchronicity for Firefox, and any Synchronicity applications) that we may provide all together constitute the Synchronicity “Website.” 
             `],
             ["Information We Collect.","We do not collect information about you." ],
