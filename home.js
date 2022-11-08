@@ -9,8 +9,18 @@ function build_first_line(){
         "nodetype":"tr"
     })
 
-    row.append(build_appearing_text_block("left appearing text"))
-    row.append(build_appearing_text_block("right appearing text"))
+    let first_cell = ao.qq({
+        "nodetype":"td"
+    })
+    row.append(first_cell)
+
+    let second_cell = ao.qq({
+        "nodetype":"td"
+    })
+    row.append(second_cell)
+
+    first_cell.append(build_appearing_text_block("left appearing text"))
+    second_cell.append(build_appearing_text_block("right appearing text"))
 
     return row
 }
@@ -20,6 +30,7 @@ function build_homepage_squeleton(){
    return ao.qq({
         "id":"main_table",
         "nodetype":"table",
+        "styles":["main_table"]
     })
 }
 
