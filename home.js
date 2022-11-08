@@ -26,6 +26,28 @@ function build_first_line(){
     return row
 }
 
+function build_second_line(){
+    let row = ao.qq({
+        "nodetype":"tr",
+        "styles":["row_height"]
+    })
+
+    let first_cell = ao.qq({
+        "nodetype":"td"
+    })
+    row.append(first_cell)
+
+    let second_cell = ao.qq({
+        "nodetype":"td"
+    })
+    row.append(second_cell)
+
+    first_cell.append(build_appearing_text_block("Second First"))
+    second_cell.append(build_appearing_text_block("Second Second"))
+
+    return row
+}
+
 
 function build_homepage_squeleton(){
    return ao.qq({
