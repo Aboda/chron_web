@@ -6,7 +6,8 @@ function main_build(){
 
 function build_first_line(){
     let row = ao.qq({
-        "nodetype":"tr"
+        "nodetype":"tr",
+        "styles":["colored_row","row_height"]
     })
 
     let first_cell = ao.qq({
