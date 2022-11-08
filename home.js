@@ -1,15 +1,25 @@
 function main_build(){
-    let main_table = build_homepage_squeleton()
-    main_table.append(build_first_line())
-    document.body.append(main_table)
+    document.body.append(build_first_line())
+    document.body.append(build_second_line())
 }
 
 function build_first_line(){
-    let row = ao.qq({
-        "nodetype":"tr",
+    let container = ao.qq({
+        "nodetype":"id",
         "styles":["colored_row","row_height"]
     })
+    let table = ao.qq({
+        "nodetype":"table",
+        "styles":["main_table"]
+    })
+    container.append(table)
 
+    let row = ao.qq({
+        "nodetype":"tr",
+        "styles":["row_height"]
+    })
+    table.append(row)
+    
     let first_cell = ao.qq({
         "nodetype":"td"
     })
@@ -23,7 +33,7 @@ function build_first_line(){
     first_cell.append(build_appearing_text_block("left appearing text"))
     second_cell.append(build_appearing_text_block("right appearing text"))
 
-    return row
+    return container
 }
 
 function build_second_line(){
@@ -46,15 +56,6 @@ function build_second_line(){
     second_cell.append(build_appearing_text_block("Second Second"))
 
     return row
-}
-
-
-function build_homepage_squeleton(){
-   return ao.qq({
-        "id":"main_table",
-        "nodetype":"table",
-        "styles":["main_table"]
-    })
 }
 
 function build_appearing_text_block(text){
