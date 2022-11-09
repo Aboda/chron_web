@@ -2,7 +2,7 @@
 
 .color_contrast_1{
     background-color:rgb(66,28,82);
-    color:rgb(0,100,255);
+    color:rgb(255,255,255);
 }
 
 .top_header_bar{
@@ -78,7 +78,7 @@
 }
 
 .colored_row{
-    background-image: linear-gradient(to bottom right, rgb(66,28,82), rgb(255,255,255));
+    background-image: linear-gradient(to bottom right, rgb(66,28,82), rgb(0,100,200));
 }
 
 .row_height{
@@ -87,5 +87,10 @@
 
 .main_clear_text{
     font-size: 60px;
+    color: white;
+}
+
+.subtitle_clear_text{
+    font-size: 24px;
     color: white;
 }
