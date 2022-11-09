@@ -2,7 +2,7 @@
 
 .color_contrast_1{
     background-color:rgb(66,28,82);
-    color:rgb(255,255,255);
+    color:rgb(0,100,255);
 }
 
 .top_header_bar{
@@ -83,4 +83,9 @@
 
 .row_height{
     height: 400px;
+}
+
+.main_clear_text{
+    font-size: 60px;
+    color: white;
 }
