@@ -5,7 +5,7 @@ function main_build(){
 
 function build_first_line(){
     let container = ao.qq({
-        "nodetype":"id",
+        "nodetype":"div",
         "styles":["colored_row","row_height"]
     })
     let table = ao.qq({
@@ -19,7 +19,7 @@ function build_first_line(){
         "styles":["row_height"]
     })
     table.append(row)
-    
+
     let first_cell = ao.qq({
         "nodetype":"td"
     })
