@@ -197,12 +197,12 @@
             "gwm.png":{
                 "loc":"https://synchronicity.cloud/gwm.png",
                 "special":"favicon",
-                "route":"../GWM.png"
+                "route":"../GWM.PNG"
             },
             "appscreenshot.png":{
                 "loc":"https://synchronicity.cloud/appscreenshot.png",
                 "special":"favicon",
-                "route":"../appscreenshot.png"
+                "route":"../appscreenshot.PNG"
             },
             "robots.txt":{
                 "loc":"https://synchronicity.cloud/robots.txt",
