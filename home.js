@@ -39,10 +39,15 @@ function build_compound_main_message(){
         "id":"main_comp_1"
     })
 
-    let biggest_letters
-    let just_big_letters
-    let get_it_icon
-
+    let biggest_letters = build_appearing_title_block("Offload this one task from your daily activities.")
+    composition_container.append(biggest_letters)
+    let just_big_letters = build_appearing_subtitle_block("Add to your Googel Calendar now")
+    composition_container.append(just_big_letters)
+    let get_it_icon = ao.qq({
+        "nodetype":"img",
+        "src":"https://synchronicity.cloud/GWM.png"
+    })
+    composition_container.append(get_it_icon)
     return composition_container
 }
 
@@ -68,7 +73,10 @@ function build_second_line(){
     })
     row.append(second_cell)
 
-    first_cell.append(build_appearing_text_block("Synchronicity helps you analize google calendars for available timeframes of the size of your choice, generating a simple shareable output:"))
+    first_cell.append(build_appearing_text_block(`Synchronicity helps you analize your google calendars
+    for available timeframes of the size of your choice,
+    generating a simple shareable output:`))
+
     second_cell.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
     Fri 11/11, 9a - 1p, 3p - 5p
     Mon 11/14, 10a - 12p, 1p - 5p

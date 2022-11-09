@@ -194,6 +194,11 @@
                 "special":"favicon",
                 "route":"../Original.png"
             },
+            "GWM.png":{
+                "loc":"https://synchronicity.cloud/GWM.png",
+                "special":"favicon",
+                "route":"../GWM.png"
+            },
             "robots.txt":{
                 "loc":"https://synchronicity.cloud/robots.txt",
                 "special":"robots"
