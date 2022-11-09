@@ -28,8 +28,10 @@ function build_first_line(){
     row.append(second_cell)
 
     first_cell.append(build_compound_main_message())
-    second_cell.append(build_appearing_text_block("right appearing text"))
-
+    second_cell.append(ao.qq({
+        "nodetype":"img",
+        "src":"https://synchronicity.cloud/appscreenshot.png"
+    }))
     return container
 }
 
@@ -39,13 +41,13 @@ function build_compound_main_message(){
         "id":"main_comp_1"
     })
 
-    let biggest_letters = build_appearing_title_block("Offload this one task from your daily activities.")
+    let biggest_letters = build_appearing_title_block("Know your availability at a click.")
     composition_container.append(biggest_letters)
-    let just_big_letters = build_appearing_subtitle_block("Add to your Googel Calendar now")
+    let just_big_letters = build_appearing_subtitle_block("Add to your Goolge Calendar now")
     composition_container.append(just_big_letters)
     let get_it_icon = ao.qq({
         "nodetype":"img",
-        "src":"https://synchronicity.cloud/GWM.png"
+        "src":"https://synchronicity.cloud/gwm.png"
     })
     composition_container.append(get_it_icon)
     return composition_container
@@ -54,7 +56,8 @@ function build_compound_main_message(){
 function build_second_line(){
 
     let table = ao.qq({
-        "nodetype":"table"
+        "nodetype":"table",
+        "styles":["main_table"]
     })
 
     let row = ao.qq({
