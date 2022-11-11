@@ -158,10 +158,15 @@ function build_third_line(){
     }))
 
     second_cell.append(build_appearing_subtitle_block(`Precisely configure your availability search specifying:
+
     Duration of the timeframe being sought.
+
     Date and hour range where to look for availability. 
+
     Days of the week that you want to consider.
+
     Google calendars (you have access to) that you want to consider.
+    
     And the ability to create the output adjusted to a different timezone.`))
     
     return container
