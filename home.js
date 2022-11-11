@@ -23,13 +23,14 @@ function build_first_line(){
     row.append(first_cell)
 
     let second_cell = ao.qq({
-        "nodetype":"td"
+        "nodetype":"td",
+        "styles":["output_example_1"]
     })
     row.append(second_cell)
 
     first_cell.append(build_compound_main_message())
 
-    second_cell.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
+    second_cell.append(build_appearing_subtitle_block(`Thu 11/10, 9a - 1p, 2p - 5p
     Fri 11/11, 9a - 1p, 3p - 5p
     Mon 11/14, 10a - 12p, 1p - 5p
     Tue 11/15, 9a - 10a, 11a - 1p, 2p - 5p
