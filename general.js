@@ -118,7 +118,7 @@ const ao = {
         }else{
           node.append(document.createTextNode(qq.target));
         };
-        node.href = qq.target;
+        node.href = qq.href;
       };
       if (qq.triggers != undefined) {
         for(let items of qq.triggers){
