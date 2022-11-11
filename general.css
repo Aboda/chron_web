@@ -81,6 +81,10 @@
     background-image: linear-gradient(to bottom right, rgb(66,28,82), rgb(0,100,200));
 }
 
+.colored_row_2{
+    background-image: linear-gradient(to top right, rgb(66,28,82), rgb(0,100,200));
+}
+
 .row_height{
     height: 400px;
 }

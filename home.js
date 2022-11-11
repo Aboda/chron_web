@@ -126,7 +126,7 @@ function build_big_image_container(){
 function build_third_line(){
     let container = ao.qq({
         "nodetype":"div",
-        "styles":["colored_row"]
+        "styles":["colored_row_2"]
     })
 
     let table = ao.qq({
@@ -157,11 +157,12 @@ function build_third_line(){
         "src":"https://synchronicity.cloud/settingscapture.png"
     }))
 
-    second_cell.append(build_appearing_subtitle_block(`You indicate the date range, 
-    the timeframe during the day,
-    the days of the week and the 
-    calendars to have their events considered, 
-    all of this in a single query settings section.`))
+    second_cell.append(build_appearing_subtitle_block(`Precisely configure your availability search specifying:
+    Duration of the timeframe being sought.
+    Date and hour range where to look for availability. 
+    Days of the week that you want to consider.
+    Google calendars (you have access to) that you want to consider.
+    And the ability to create the output adjusted to a different timezone.`))
     
     return container
 }
