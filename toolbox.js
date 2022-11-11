@@ -204,6 +204,11 @@
                 "special":"favicon",
                 "route":"../appscreenshot.PNG"
             },
+            "settingscapture.png":{
+                "loc":"https://synchronicity.cloud/settingscapture.png",
+                "special":"favicon",
+                "route":"../settingscapture.PNG"
+            },
             "robots.txt":{
                 "loc":"https://synchronicity.cloud/robots.txt",
                 "special":"robots"

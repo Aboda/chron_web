@@ -81,7 +81,7 @@ function build_second_line(){
 
     first_cell.append(build_appearing_text_block(`Synchronicity helps you analyze your google calendars
     for available timeframes of the size of your choice,
-    generating a simple shareable output:`))
+    generating a simple plain text output:`))
 
     second_cell.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
     Fri 11/11, 9a - 1p, 3p - 5p
@@ -123,9 +123,49 @@ function build_big_image_container(){
     }))
 }
 
+function build_third_line(){
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["colored_row"]
+    })
+
+    let table = ao.qq({
+        "nodetype":"table",
+        "styles":["main_table"]
+    })
+    container.append(table)
+
+    let row = ao.qq({
+        "nodetype":"tr",
+        "styles":["row_height"]
+    })
+    table.append(row)
+
+    let first_cell = ao.qq({
+        "nodetype":"td"
+    })
+    row.append(first_cell)
+
+    let second_cell = ao.qq({
+        "nodetype":"td",
+        "styles":["output_example_1"]
+    })
+    row.append(second_cell)
+
+    first_cell.append(ao.qq({
+        "nodetype":"img",
+        "src":"https://synchronicity.cloud/settingscapture.png"
+    }))
+
+    second_cell.append(build_appearing_text_block(`You indicate the date range, the timeframe during the day, the days of the week and the calendars to have their events considered, all of this in a single query settings section.`))
+    
+    return container
+}
+
 function main_build(){
     document.body.append(build_first_line())
     document.body.append(build_second_line())
+    document.body.append(build_third_line())
 }
 
 window.onload = () => {
