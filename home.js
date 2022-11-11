@@ -64,8 +64,7 @@ function build_second_line(){
     })
 
     let row = ao.qq({
-        "nodetype":"tr",
-        "styles":["row_height"]
+        "nodetype":"tr"
     })
     table.append(row)
 
@@ -166,9 +165,69 @@ function build_third_line(){
     Days of the week that you want to consider.
 
     Google calendars (you have access to) that you want to consider.
-    
+
     And the ability to create the output adjusted to a different timezone.`))
     
+    return container
+}
+
+function build_fourth_line(){
+
+    let table = ao.qq({
+        "nodetype":"table",
+        "styles":["main_table"]
+    })
+
+    let row = ao.qq({
+        "nodetype":"tr"
+    })
+    table.append(row)
+
+    let first_cell = ao.qq({
+        "nodetype":"td"
+    })
+    row.append(first_cell)
+
+    let second_cell = ao.qq({
+        "nodetype":"td"
+    })
+    row.append(second_cell)
+
+    first_cell.append(build_appearing_text_block(`If you find yourself frequently scheduling one or more calendars, this is a helpful tool with minimal hassle and no surprises.`))
+
+    second_cell.append(build_appearing_text_block(`The generated output is easily shareable trough messaging or emails as plain text, granting as many options as available for you or a third party to consider.`))
+
+    return table
+}
+
+function build_closer_line(){
+    let container = ao.qq({
+        "nodetype":"div",
+        "style":["text_list"]
+    })
+
+    let links_box_1 = ao.qq({
+        "nodetype":"div"
+    })
+    container.append(links_box_1)
+    
+    let links_box_2 = ao.qq({
+        "nodetype":"div"
+    })
+    container.append(links_box_2)
+
+    links_box_1.append(ao.qq({
+        "nodetype":"a",
+        "innerText":"Terms of Service",
+        "href":"https://synchronicity.cloud/terms_of_service"
+    }))
+
+    links_box_2.append(ao.qq({
+        "nodetype":"a",
+        "innerText":"Privacy Policy",
+        "href":"https://synchronicity.cloud/privacy_policy"
+    }))
+
     return container
 }
 
@@ -176,8 +235,17 @@ function main_build(){
     document.body.append(build_first_line())
     document.body.append(build_second_line())
     document.body.append(build_third_line())
+    document.body.append(build_fourth_line())
+    document.body.append(build_closer_line())
 }
 
+/*
+
+This output considered 5 events received from the active match query.
+    From these busy blocks 0 intersected with the evaluated timeframe.
+    0 minutes previously available where discounted.
+
+*/
 window.onload = () => {
     build_headbar()
     main_build()
