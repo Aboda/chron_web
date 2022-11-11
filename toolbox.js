@@ -242,7 +242,7 @@
                 ],
                 "js":[
                     "./general.js",
-                    "./headbar.js",
+                    "./across_bar.js",
                     "./home.js"
                 ]
             },
@@ -267,7 +267,7 @@
                 ],
                 "js":[
                     "./general.js",
-                    "./headbar.js",
+                    "./across_bar.js",
                     "./tos.js"
                 ]
             },
@@ -292,7 +292,7 @@
                 ],
                 "js":[
                     "./general.js",
-                    "./headbar.js",
+                    "./across_bar.js",
                     "./pp.js"
                 ]
             }
