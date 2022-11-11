@@ -200,43 +200,11 @@ function build_fourth_line(){
     return table
 }
 
-function build_closer_line(){
-    let container = ao.qq({
-        "nodetype":"div",
-        "style":["text_list"]
-    })
-
-    let links_box_1 = ao.qq({
-        "nodetype":"div"
-    })
-    container.append(links_box_1)
-    
-    let links_box_2 = ao.qq({
-        "nodetype":"div"
-    })
-    container.append(links_box_2)
-
-    links_box_1.append(ao.qq({
-        "nodetype":"a",
-        "innerText":"Terms of Service",
-        "href":"https://synchronicity.cloud/terms_of_service"
-    }))
-
-    links_box_2.append(ao.qq({
-        "nodetype":"a",
-        "innerText":"Privacy Policy",
-        "href":"https://synchronicity.cloud/privacy_policy"
-    }))
-
-    return container
-}
-
 function main_build(){
     document.body.append(build_first_line())
     document.body.append(build_second_line())
     document.body.append(build_third_line())
     document.body.append(build_fourth_line())
-    document.body.append(build_closer_line())
 }
 
 /*
@@ -249,4 +217,5 @@ This output considered 5 events received from the active match query.
 window.onload = () => {
     build_headbar()
     main_build()
+    build_feetbar()
 }
