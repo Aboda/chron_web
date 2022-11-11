@@ -112,14 +112,6 @@ const ao = {
       };
       if (qq.styles != undefined) {this.dress(node,qq.styles,true)};
       if (qq.path != undefined) {node.setAttribute("d", qq.path)};
-      if (qq.nodetype == "a") {
-        if (qq.link_text != undefined) {
-          node.append(document.createTextNode(qq.link_text));
-        }else{
-          node.append(document.createTextNode(qq.target));
-        };
-        node.href = qq.href;
-      };
       if (qq.triggers != undefined) {
         for(let items of qq.triggers){
           node.addEventListener(items[0],items[1]);
