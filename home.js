@@ -30,11 +30,10 @@ function build_first_line(){
 
     first_cell.append(build_compound_main_message())
 
-    second_cell.append(build_appearing_subtitle_block(`Thu 11/10, 9a - 1p, 2p - 5p
-    Fri 11/11, 9a - 1p, 3p - 5p
-    Mon 11/14, 10a - 12p, 1p - 5p
-    Tue 11/15, 9a - 10a, 11a - 1p, 2p - 5p
-    Wed 11/16, 9a - 11a, 12p - 1p, 2p - 5p`))
+    second_cell.append(ao.qq({
+        "nodetype":"img",
+        "src":"https://synchronicity.cloud/appscreenshot.png"
+    }))
     
     return container
 }
@@ -84,11 +83,11 @@ function build_second_line(){
     for available timeframes of the size of your choice,
     generating a simple shareable output:`))
 
-
-    second_cell.append(ao.qq({
-        "nodetype":"img",
-        "src":"https://synchronicity.cloud/appscreenshot.png"
-    }))
+    second_cell.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
+    Fri 11/11, 9a - 1p, 3p - 5p
+    Mon 11/14, 10a - 12p, 1p - 5p
+    Tue 11/15, 9a - 10a, 11a - 1p, 2p - 5p
+    Wed 11/16, 9a - 11a, 12p - 1p, 2p - 5p`))
 
     return table
 }
