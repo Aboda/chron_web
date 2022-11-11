@@ -157,7 +157,11 @@ function build_third_line(){
         "src":"https://synchronicity.cloud/settingscapture.png"
     }))
 
-    second_cell.append(build_appearing_text_block(`You indicate the date range, the timeframe during the day, the days of the week and the calendars to have their events considered, all of this in a single query settings section.`))
+    second_cell.append(build_appearing_subtitle_block(`You indicate the date range, 
+    the timeframe during the day,
+    the days of the week and the 
+    calendars to have their events considered, 
+    all of this in a single query settings section.`))
     
     return container
 }
