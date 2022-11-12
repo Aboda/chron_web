@@ -24,7 +24,7 @@ function build_headbar(){
     let headbar = ao.qq({
         "id":"headbar",
         "nodetype":"div",
-        "styles":["color_contrast_1","top_header_bar"]
+        "styles":["color_contrast_1","top_header_bar","extra_l_r_borders"]
     })
 
     let appname_container = ao.qq({

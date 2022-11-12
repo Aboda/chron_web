@@ -93,7 +93,7 @@ function build_appearing_title_block(text){
 function build_appearing_subtitle_block(text){
     return ao.qq({ 
         "nodetype":"p",
-        "styles":["subtitle_clear_text","soft_appear"],
+        "styles":["subtitle_clear_text","soft_appear","lim_w_text"],
         "innerText":text
     })
 }
@@ -101,7 +101,7 @@ function build_appearing_subtitle_block(text){
 function build_appearing_text_block(text){
     return ao.qq({ 
         "nodetype":"p",
-        "styles":["soft_appear"],
+        "styles":["soft_appear","lim_w_text"],
         "innerText":text
     })
 }

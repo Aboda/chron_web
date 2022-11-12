@@ -19,16 +19,17 @@
 }
 
 .internal_nav_button{
-    margin:1rem;
+    border:1rem;
     cursor:pointer;
-}
-
-.internal_nav_button:hover{
-    background-color: blueviolet;
 }
 
 .half_space_left{
     margin-left:.5rem;
+}
+
+.extra_l_r_borders{
+    border-left:2rem;
+    border-right:2rem;
 }
 
 .link_list{
@@ -128,4 +129,8 @@ a:hover {
   
 a:active {
     color: red;
+}
+
+.lim_w_text{
+    max-width: 410px;
 }
