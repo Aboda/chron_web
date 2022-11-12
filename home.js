@@ -9,13 +9,13 @@ function build_first_line(){
         "nodetype":"div",
         "styles":["minimal_spacing"]
     })
-    row.append(first_cell)
+    container.append(first_cell)
 
     let second_cell = ao.qq({
         "nodetype":"div",
         "styles":["minimal_spacing"]
     })
-    row.append(second_cell)
+    container.append(second_cell)
 
     first_cell.append(build_compound_main_message())
 
