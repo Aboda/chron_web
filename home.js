@@ -217,5 +217,5 @@ This output considered 5 events received from the active match query.
 window.onload = () => {
     build_headbar()
     main_build()
-    build_feetbar()
+    build_closer_line()
 }
