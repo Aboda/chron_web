@@ -77,13 +77,13 @@ function build_closer_line(){
 
     let links_box_1 = ao.qq({
         "nodetype":"div",
-        "styles":["minimal_spacing"]
+        "styles":["minimal_spacing","vertical_list"]
     })
     container.append(links_box_1)
     
     let links_box_2 = ao.qq({
         "nodetype":"div",
-        "styles":["minimal_spacing"]
+        "styles":["minimal_spacing","vertical_list"]
     })
     container.append(links_box_2)
 
