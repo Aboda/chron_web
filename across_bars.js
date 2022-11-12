@@ -72,7 +72,7 @@ function build_headbar(){
 function build_closer_line(){
     let container = ao.qq({
         "nodetype":"div",
-        "styles":["text_list"]
+        "styles":["text_list","color_contrast_1"]
     })
 
     let links_box_1 = ao.qq({
@@ -90,25 +90,29 @@ function build_closer_line(){
     links_box_1.append(ao.qq({
         "nodetype":"a",
         "innerText":"Terms of Service",
-        "href":"https://synchronicity.cloud/terms_of_service"
+        "href":"https://synchronicity.cloud/terms_of_service",
+        "styles":["minimal_spacing"]
     }))
 
     links_box_1.append(ao.qq({
         "nodetype":"a",
         "innerText":"Privacy Policy",
-        "href":"https://synchronicity.cloud/privacy_policy"
+        "href":"https://synchronicity.cloud/privacy_policy",
+        "styles":["minimal_spacing"]
     }))
 
     links_box_2.append(ao.qq({
         "nodetype":"a",
         "innerText":"Developer Site",
-        "href":"https://demian.app"
+        "href":"https://demian.app",
+        "styles":["minimal_spacing"]
     }))
 
     links_box_2.append(ao.qq({
         "nodetype":"a",
         "innerText":"Support",
-        "href":"mailto:synchronicity_support@demian.app"
+        "href":"mailto:synchronicity_support@demian.app",
+        "styles":["minimal_spacing"]
     }))
 
     document.body.append(container)

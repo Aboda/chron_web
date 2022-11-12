@@ -113,3 +113,19 @@
     margin: 2rem;
     border: 2rem;
 }
+
+a:link {
+    color: white;
+}
+  
+a:visited {
+    color: orange;
+}
+  
+a:hover {
+    color: grey;
+}
+  
+a:active {
+    color: red;
+}
