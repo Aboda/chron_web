@@ -2,29 +2,18 @@
 function build_first_line(){
     let container = ao.qq({
         "nodetype":"div",
-        "styles":["colored_row"]
+        "styles":["colored_row","text_list"]
     })
-
-    let table = ao.qq({
-        "nodetype":"table",
-        "styles":["main_table"]
-    })
-    container.append(table)
-
-    let row = ao.qq({
-        "nodetype":"tr",
-        "styles":["row_height"]
-    })
-    table.append(row)
 
     let first_cell = ao.qq({
-        "nodetype":"td"
+        "nodetype":"div",
+        "styles":["minimal_spacing"]
     })
     row.append(first_cell)
 
     let second_cell = ao.qq({
-        "nodetype":"td",
-        "styles":["output_example_1"]
+        "nodetype":"div",
+        "styles":["minimal_spacing"]
     })
     row.append(second_cell)
 
@@ -44,7 +33,9 @@ function build_compound_main_message(){
         "id":"main_comp_1"
     })
 
-    let biggest_letters = build_appearing_title_block("Know your availability at a click.")
+    let biggest_letters = build_appearing_title_block(`Know your
+    availability
+    at a click.`)
     composition_container.append(biggest_letters)
     let just_big_letters = build_appearing_subtitle_block("Add to your Goolge Calendar now")
     composition_container.append(just_big_letters)

@@ -1,6 +1,11 @@
 function build_headbar(){
     let links = [
-        ["Home","Inicio","https://synchronicity.cloud/"]
+        ["Home","Inicio","https://synchronicity.cloud/"],
+        ["The App","La Aplicación","https://synchronicity.cloud/"],
+        ["Features","Caracteristicas","https://synchronicity.cloud/"],
+        ["About Us","Acerca de Nosotros","https://synchronicity.cloud/"],
+        ["Reviews","Reseñas","https://synchronicity.cloud/"],
+        ["Contact","Contacto","https://synchronicity.cloud/"]
     ]
     
     let lng_index
@@ -25,7 +30,7 @@ function build_headbar(){
     let appname_container = ao.qq({
         "id":"appname_container",
         "nodetype":"div",
-        "styles":["link_list"]
+        "styles":["link_list","minimal_spacing"]
     })
 
     appname_container.append(ao.qq({
