@@ -49,7 +49,8 @@ function build_compound_main_message(){
 
 function build_second_line(){
     let container = ao.qq({
-        "nodetype":"div"
+        "nodetype":"div",
+        "styles":["text_list"]
     })
 
     let first_cell = ao.qq({
