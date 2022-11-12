@@ -48,30 +48,21 @@ function build_compound_main_message(){
 }
 
 function build_second_line(){
-
-    let table = ao.qq({
-        "nodetype":"table",
-        "styles":["main_table"]
+    let container = ao.qq({
+        "nodetype":"div"
     })
-
-    let row = ao.qq({
-        "nodetype":"tr"
-    })
-    table.append(row)
 
     let first_cell = ao.qq({
-        "nodetype":"td"
+        "nodetype":"div"
     })
-    row.append(first_cell)
+    container.append(first_cell)
 
     let second_cell = ao.qq({
-        "nodetype":"td"
+        "nodetype":"div"
     })
-    row.append(second_cell)
+    container.append(second_cell)
 
-    first_cell.append(build_appearing_text_block(`Synchronicity helps you analyze your google calendars
-    for available timeframes of the size of your choice,
-    generating a simple plain text output:`))
+    first_cell.append(build_appearing_text_block("Synchronicity helps you analyze your google calendars for available timeframes of the size of your choice, generating a simple plain text output:"))
 
     second_cell.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
     Fri 11/11, 9a - 1p, 3p - 5p
@@ -79,7 +70,7 @@ function build_second_line(){
     Tue 11/15, 9a - 10a, 11a - 1p, 2p - 5p
     Wed 11/16, 9a - 11a, 12p - 1p, 2p - 5p`))
 
-    return table
+    return container
 }
 
 function build_appearing_title_block(text){
