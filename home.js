@@ -207,13 +207,6 @@ function main_build(){
     document.body.append(build_fourth_line())
 }
 
-/*
-
-This output considered 5 events received from the active match query.
-    From these busy blocks 0 intersected with the evaluated timeframe.
-    0 minutes previously available where discounted.
-
-*/
 window.onload = () => {
     build_headbar()
     main_build()
