@@ -33,20 +33,20 @@
 
 .link_list{
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .text_list{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
 }
 .vertical_list{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
 }
