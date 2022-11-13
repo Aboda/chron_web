@@ -30,7 +30,7 @@ function build_headbar(){
     let appname_container = ao.qq({
         "id":"appname_container",
         "nodetype":"div",
-        "styles":["link_list","minimal_spacing"]
+        "styles":["hor_flex","minimal_spacing"]
     })
 
     appname_container.append(ao.qq({
@@ -52,7 +52,7 @@ function build_headbar(){
 
     let links_container = ao.qq({
         "nodetype":"div",
-        "styles":["link_list"]
+        "styles":["hor_flex"]
     })
   
     for (let lnk of links){
@@ -77,7 +77,7 @@ function build_headbar(){
 function build_closer_line(){
     let container = ao.qq({
         "nodetype":"div",
-        "styles":["text_list","color_contrast_1"]
+        "styles":["hor_flex","color_contrast_1"]
     })
 
     let links_box_1 = ao.qq({

@@ -3,14 +3,15 @@ function build_first_line(){
     let container = ao.qq({
         "id":"Home",
         "nodetype":"div",
-        "styles":["colored_row","text_list","container_border_spacing"]
+        "styles":["colored_row","hor_flex","container_border_spacing"]
     })
 
     container.append(build_compound_main_message())
 
     container.append(ao.qq({
         "nodetype":"img",
-        "src":"https://synchronicity.cloud/appscreenshot.png"
+        "src":"https://synchronicity.cloud/appscreenshot.png",
+        "styles":["wide_margin"]
     }))
 
     return container
@@ -19,7 +20,7 @@ function build_first_line(){
 function build_second_line(){
     let container = ao.qq({
         "nodetype":"div",
-        "styles":["text_list","container_border_spacing"]
+        "styles":["hor_flex","container_border_spacing"]
     })
 
     container.append(build_appearing_text_block("Synchronicity helps you analyze your google calendars for available timeframes of the size of your choice, generating a simple plain text output:"))
@@ -38,12 +39,13 @@ function build_third_line(){
     let container = ao.qq({
         "id":"TheApp",
         "nodetype":"div",
-        "styles":["colored_row_2","text_list","container_border_spacing"]
+        "styles":["colored_row_2","hor_flex","container_border_spacing"]
     })
 
     container.append(ao.qq({
         "nodetype":"img",
-        "src":"https://synchronicity.cloud/settingscapture.png"
+        "src":"https://synchronicity.cloud/settingscapture.png",
+        "styles":["wide_margin"]
     }))
 
     container.append(build_subtitle_block(`control the parameters of your search:
@@ -63,7 +65,7 @@ function build_fourth_line(){
 
     let container = ao.qq({
         "nodetype":"div",
-        "styles":["text_list","container_border_spacing"]
+        "styles":["hor_flex","container_border_spacing"]
     })
 
     container.append(build_appearing_text_block(`If you find yourself frequently scheduling one or more calendars, this is a helpful tool with minimal hassle and no surprises.`))
@@ -76,7 +78,8 @@ function build_fourth_line(){
 function build_compound_main_message(){
     let composition_container = ao.qq({
         "nodetype":"div",
-        "id":"main_comp_1"
+        "id":"main_comp_1",
+        "styles":["wide_margin"]
     })
 
     let biggest_letters = build_appearing_title_block(`Find the time`)
@@ -110,7 +113,7 @@ function build_subtitle_block(text){
 function build_appearing_text_block(text){
     return ao.qq({ 
         "nodetype":"p",
-        "styles":["soft_appear","lim_w_text","min_height_text"],
+        "styles":["soft_appear","lim_w_text","wide_margin"],
         "innerText":text
     })
 }
