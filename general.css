@@ -37,6 +37,10 @@ body{width:100%;}
     border-right:2rem;
 }
 
+.container_border_spacing{
+    border:2.5rem;
+}
+
 .link_list{
     display: flex;
     flex-flow: row wrap;

@@ -3,7 +3,7 @@ function build_first_line(){
     let container = ao.qq({
         "id":"Home",
         "nodetype":"div",
-        "styles":["colored_row","text_list"]
+        "styles":["colored_row","text_list","container_border_spacing"]
     })
 
     container.append(build_compound_main_message())
@@ -19,7 +19,7 @@ function build_first_line(){
 function build_second_line(){
     let container = ao.qq({
         "nodetype":"div",
-        "styles":["text_list"]
+        "styles":["text_list","container_border_spacing"]
     })
 
     container.append(build_appearing_text_block("Synchronicity helps you analyze your google calendars for available timeframes of the size of your choice, generating a simple plain text output:"))
@@ -38,7 +38,7 @@ function build_third_line(){
     let container = ao.qq({
         "id":"TheApp",
         "nodetype":"div",
-        "styles":["colored_row_2","text_list"]
+        "styles":["colored_row_2","text_list","container_border_spacing"]
     })
 
     container.append(ao.qq({
@@ -46,15 +46,13 @@ function build_third_line(){
         "src":"https://synchronicity.cloud/settingscapture.png"
     }))
 
-    container.append(build_subtitle_block(`Precisely configure your availability search specifying:
+    container.append(build_subtitle_block(`control the parameters of your search:
 
-    Duration of the timeframe being sought.
+    Duration of the event.
 
-    Date and hour range where to look for availability. 
+    Date and time range to schedule. 
 
-    Days of the week that you want to consider.
-
-    Google calendars (you have access to) that you want to consider.
+    Google calendars to evaluate.
 
     And the ability to create the output adjusted to a different timezone.`))
 
@@ -65,7 +63,7 @@ function build_fourth_line(){
 
     let container = ao.qq({
         "nodetype":"div",
-        "styles":["text_list"]
+        "styles":["text_list","container_border_spacing"]
     })
 
     container.append(build_appearing_text_block(`If you find yourself frequently scheduling one or more calendars, this is a helpful tool with minimal hassle and no surprises.`))
@@ -96,7 +94,7 @@ function build_compound_main_message(){
 function build_appearing_title_block(text){
     return ao.qq({ 
         "nodetype":"p",
-        "styles":["main_clear_text","soft_appear"],
+        "styles":["main_clear_text","soft_appear","vertical_list"],
         "innerText":text
     })
 }
