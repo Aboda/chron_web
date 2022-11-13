@@ -1,4 +1,8 @@
 *{font-family: 'Roboto Mono', monospace;text-align: center;}
+html {
+    width:100%;
+    scroll-behavior: smooth;
+}
 body{width:100%;}
 
 .color_contrast_1{
