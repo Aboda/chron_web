@@ -34,11 +34,9 @@ function build_compound_main_message(){
         "id":"main_comp_1"
     })
 
-    let biggest_letters = build_appearing_title_block(`Know your
-    availability
-    at a click.`)
+    let biggest_letters = build_appearing_title_block(`Find the time`)
     composition_container.append(biggest_letters)
-    let just_big_letters = build_appearing_subtitle_block("Add to your Goolge Calendar now")
+    let just_big_letters = build_subtitle_block("Add to your Goolge Calendar now")
     composition_container.append(just_big_letters)
     let get_it_icon = ao.qq({
         "nodetype":"img",
@@ -83,10 +81,10 @@ function build_appearing_title_block(text){
     })
 }
 
-function build_appearing_subtitle_block(text){
+function build_subtitle_block(text){
     return ao.qq({ 
         "nodetype":"p",
-        "styles":["subtitle_clear_text","soft_appear","lim_w_text"],
+        "styles":["subtitle_clear_text","lim_w_text"],
         "innerText":text
     })
 }
@@ -94,7 +92,7 @@ function build_appearing_subtitle_block(text){
 function build_appearing_text_block(text){
     return ao.qq({ 
         "nodetype":"p",
-        "styles":["soft_appear","lim_w_text"],
+        "styles":["soft_appear","lim_w_text","min_height_text"],
         "innerText":text
     })
 }
@@ -141,7 +139,7 @@ function build_third_line(){
         "src":"https://synchronicity.cloud/settingscapture.png"
     }))
 
-    second_cell.append(build_appearing_subtitle_block(`Precisely configure your availability search specifying:
+    second_cell.append(build_subtitle_block(`Precisely configure your availability search specifying:
 
     Duration of the timeframe being sought.
 
