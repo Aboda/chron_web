@@ -1,6 +1,7 @@
 
 function build_first_line(){
     let container = ao.qq({
+        "id":"Home",
         "nodetype":"div",
         "styles":["colored_row","text_list"]
     })
@@ -107,6 +108,7 @@ function build_big_image_container(){
 
 function build_third_line(){
     let container = ao.qq({
+        "id":"TheApp",
         "nodetype":"div",
         "styles":["colored_row_2"]
     })

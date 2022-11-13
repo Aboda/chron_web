@@ -1,7 +1,7 @@
 function build_headbar(){
     let links = [
         ["Home","Inicio","https://synchronicity.cloud/"],
-        ["The App","La Aplicación","https://synchronicity.cloud/"],
+        ["The App","La Aplicación","#TheApp"],
         ["Features","Caracteristicas","https://synchronicity.cloud/"],
         ["About Us","Acerca de Nosotros","https://synchronicity.cloud/"],
         ["Reviews","Reseñas","https://synchronicity.cloud/"],
@@ -114,6 +114,16 @@ function build_closer_line(){
         "nodetype":"a",
         "innerText":"Support",
         "href":"mailto:synchronicity_support@demian.app"
+    }))
+
+    links_box_1.append(ao.qq({
+        "nodetype":"p",
+        "innerText":"© 2023 by Synchronicity Cloud LLC."
+    }))
+
+    links_box_2.append(ao.qq({
+        "nodetype":"p",
+        "innerText":"Developer: Demian Sanchez"
     }))
 
     document.body.append(container)
