@@ -48,7 +48,7 @@ function build_third_line(){
         "styles":["wide_margin"]
     }))
 
-    container.append(build_subtitle_block(`control the parameters of your search:
+    container.append(build_subtitle_block(`Control the parameters of your search:
 
     Duration of the event.
 

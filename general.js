@@ -132,9 +132,12 @@ const ao = {
     "counters":{
       "id":0
     },
-    aint_got_no_id(some_config_obj) {
+    aint_got_no_id(some_config_obj,series) {
+      if(series = undefined){
+        series = "aid-"
+      }
       if (some_config_obj.id == undefined) {
-        some_config_obj.id = "aid-"+this.counters.id;
+        some_config_obj.id = series+this.counters.id;
         this.counters.id++;
       };
     },
