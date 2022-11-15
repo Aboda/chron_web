@@ -106,24 +106,19 @@ function build_closer_line(){
 
     links_box_2.append(ao.qq({
         "nodetype":"a",
-        "innerText":"Developer Site",
-        "href":"https://demian.app"
-    }))
-
-    links_box_2.append(ao.qq({
-        "nodetype":"a",
         "innerText":"Support",
         "href":"mailto:synchronicity_support@demian.app"
     }))
 
-    links_box_1.append(ao.qq({
-        "nodetype":"p",
-        "innerText":"© 2023 by Synchronicity Cloud LLC."
+    links_box_2.append(ao.qq({
+        "nodetype":"a",
+        "innerText":"Developer Site",
+        "href":"https://demian.app"
     }))
 
-    links_box_2.append(ao.qq({
+    container.append(ao.qq({
         "nodetype":"p",
-        "innerText":"Developer: Demian Sanchez"
+        "innerText":"© 2023 by Synchronicity Cloud LLC."
     }))
 
     document.body.append(container)
