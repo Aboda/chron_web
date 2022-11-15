@@ -1,8 +1,10 @@
 *{font-family: 'Roboto Mono', monospace;text-align: center;}
 html,body {
-    width:100%;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    top:0;
+    left:0;
+    right:0;
 }
 
 .color_contrast_1{
@@ -15,6 +17,7 @@ html,body {
     overflow: hidden;
     top:0;
     left:0;
+    right:0;
     width:100%;
     display: flex;
     flex-flow: row nowrap;
