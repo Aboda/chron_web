@@ -5,6 +5,10 @@ html,body {
     top:0;
     left:0;
     right:0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .color_contrast_1{
