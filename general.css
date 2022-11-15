@@ -1,15 +1,5 @@
-*{font-family: 'Roboto Mono', monospace;text-align: center;}
-html,body {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    top:0;
-    left:0;
-    right:0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: stretch;
-}
+*{font-family: 'Roboto Mono', monospace; text-align: center;}
+body {scroll-behavior: smooth; overflow-x: hidden;}
 
 .color_contrast_1{
     background-color:rgb(66,28,82);
@@ -22,7 +12,6 @@ html,body {
     top:0;
     left:0;
     right:0;
-    width:100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
