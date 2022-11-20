@@ -209,6 +209,11 @@
                 "special":"favicon",
                 "route":"../settingscapture.PNG"
             },
+            "additional_consideration.png":{
+                "loc":"https://synchronicity.cloud/additional_consideration.png",
+                "special":"favicon",
+                "route":"../additional_consideration.PNG"
+            },
             "robots.txt":{
                 "loc":"https://synchronicity.cloud/robots.txt",
                 "special":"robots"

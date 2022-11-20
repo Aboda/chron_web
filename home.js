@@ -143,15 +143,15 @@ function build_features(){
     })
     section_container.append(colored_sub_container)
 
+    colored_sub_container.append(build_subtitle_block(`Additionally you can compare your availability with other google calendar users who previously shared their busy/avaialable details with you.
+    
+    This allows you to effectively know the availability of both calendars`))
+
     colored_sub_container.append(ao.qq({
         "nodetype":"img",
-        "src":"https://synchronicity.cloud/settingscapture.png",
+        "src":"https://synchronicity.cloud/additional_consideration.png",
         "styles":["wide_margin"]
     }))
-
-    colored_sub_container.append(build_subtitle_block(`Be precise in the dates, days, hours of the day, length of the sought available timeframe and the google calendars that you want to consider.
-    
-    Enjoy having a digital assistant sidebar to your google calendar that wil perform this basic yet recurrent task for people who manage busy agendas.`))
 
     let white_sub_container = ao.qq({
         "nodetype":"div",
@@ -180,7 +180,7 @@ function build_about_us(){
 
     let colored_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["colored_row_3","hor_flex","container_border_spacing"]
+        "styles":["colored_row_3","hor_flex","container_border_spacing","row_height"]
     })
     section_container.append(colored_sub_container)
 
