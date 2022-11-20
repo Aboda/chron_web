@@ -120,7 +120,7 @@ function build_the_app(){
     })
     section_container.append(white_sub_container)
 
-    white_sub_container.append(build_appearing_text_block(`Syncrhonicity will use this parameter to produce a written script representing the Month/Date evaluated and the timeframes during the day in which the meeting can be scheduled.`))
+    white_sub_container.append(build_appearing_text_block(`Syncrhonicity will use these settings to produce a written script representing the Month/Date evaluated and the timeframes during the day in which the meeting can be scheduled.`))
 
     white_sub_container.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
     Fri 11/11, 9a - 1p, 3p - 5p
@@ -177,6 +177,14 @@ function build_about_us(){
         "id":"AboutUs",
         "nodetype":"div",
     })
+
+    let colored_sub_container = ao.qq({
+        "nodetype":"div",
+        "styles":["colored_row_3","hor_flex","container_border_spacing"]
+    })
+    section_container.append(colored_sub_container)
+
+    colored_sub_container.append(build_subtitle_block(`We at Synchronicity are modern professionals looking to actively participate of helping those interested in making their activities simpler and more efficient. And improve the relationship we have with time.`))
 
     return section_container
 }
