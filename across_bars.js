@@ -93,7 +93,7 @@ function build_displayed_options(links){
         }))
     }
 
-    ao.simple.headbar.append(links_container)
+    ao.simple.headbar.node.append(links_container)
 }
 
 function build_hamburger_options(links){
@@ -104,7 +104,7 @@ function build_hamburger_options(links){
             ao.simple.full_screen_menu.node.requestFullscreen()
         }]]
     })
-    ao.simple.headbar.append(burger_button)
+    ao.simple.headbar.node.append(burger_button)
 
     let fullscreen_item = ao.qq({
         "id":"full_screen_menu",
