@@ -49,7 +49,6 @@ function build_home() {
     })
 
     let colored_sub_container = ao.qq({
-        "id":"Home",
         "nodetype":"div",
         "styles":["colored_row","hor_flex","container_border_spacing"]
     })
