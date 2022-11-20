@@ -9,12 +9,18 @@ function build_compound_main_message(){
     composition_container.append(biggest_letters)
     let just_big_letters = build_subtitle_block("Add to your Google Calendar now")
     composition_container.append(just_big_letters)
+    let link = ao.qq({
+        "nodetype":"a",
+        "href":"https://workspace.google.com/marketplace"
+    })
     let get_it_icon = ao.qq({
         "nodetype":"img",
         "src":"https://synchronicity.cloud/gwm.png",
         "styles":["internal_nav_button"]
     })
-    composition_container.append(get_it_icon)
+    link.append(get_it_icon)
+    composition_container.append(link)
+    
     return composition_container
 }
 
