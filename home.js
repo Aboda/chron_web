@@ -7,7 +7,7 @@ function build_compound_main_message(){
 
     let biggest_letters = build_appearing_title_block(`Find the time`)
     composition_container.append(biggest_letters)
-    let just_big_letters = build_subtitle_block("Add to your Goolge Calendar now")
+    let just_big_letters = build_subtitle_block("Add to your Google Calendar now")
     composition_container.append(just_big_letters)
     let get_it_icon = ao.qq({
         "nodetype":"img",

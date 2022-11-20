@@ -115,7 +115,7 @@ function build_hamburger_options(links){
     for (let lnk of links){
         fullscreen_item.append(ao.qq({
             "nodetype":"div",
-            "innerText":lnk[lng_index],
+            "innerText":lnk[0],
             "styles":["internal_nav_button","minimal_spacing"],
             "triggers":[["click",function(){window.location.href = lnk[2]}]]
         }))
