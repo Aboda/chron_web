@@ -1,7 +1,7 @@
 function build_headbar(){
     let links = [
-        ["Home","Inicio","https://synchronicity.cloud/"],
-        ["The App","La Aplicación","#TheApp"],
+        ["Home","Inicio","https://synchronicity.cloud/#Home"],
+        ["The App","La Aplicación","https://synchronicity.cloud/#TheApp"],
         ["Features","Caracteristicas","https://synchronicity.cloud/"],
         ["About Us","Acerca de Nosotros","https://synchronicity.cloud/"],
         ["Reviews","Reseñas","https://synchronicity.cloud/"],
@@ -55,8 +55,8 @@ function build_headbar(){
 
     appname_container.append(ao.qq({
         "id":"appname",
-        "nodetype":"p",
-        "innerText":"Synchronicity",
+        "nodetype":"b",
+        "innerText":"Synchronicity (Beta)",
         "styles":["half_space_left"]
     }))
 
