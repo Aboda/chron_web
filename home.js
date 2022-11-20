@@ -219,7 +219,8 @@ function build_contact_pannel_container(){
         "nodetype":"div"
     })
     contact_pannel_container.append(ao.qq({
-        "nodetype":"input"
+        "nodetype":"input",
+        "placeholder":"contact email"
     }))
     contact_pannel_container.append(ao.qq({
         "nodetype":"div",

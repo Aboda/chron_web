@@ -87,7 +87,8 @@ const ao = {
       "fontSize":"style",
       "overflowX":"style",
       "transition":"style",
-      "contenteditable":true
+      "contenteditable":true,
+      "placeholder":true
     },
     qq (qq,container) {
       this.aint_got_no_id(qq);
