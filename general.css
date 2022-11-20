@@ -1,5 +1,5 @@
 *{font-family: 'Roboto Mono', monospace; text-align: center;}
-body {scroll-behavior: smooth; overflow-x: hidden;}
+html,body {scroll-behavior: smooth; overflow-x: hidden;}
 
 .color_contrast_1{
     background-color:rgb(66,28,82);
