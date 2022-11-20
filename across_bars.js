@@ -87,7 +87,7 @@ function build_displayed_options(links){
     for (let lnk of links){
         links_container.append(ao.qq({
             "nodetype":"div",
-            "innerText":lnk[lng_index],
+            "innerText":lnk[0],
             "styles":["internal_nav_button","minimal_spacing"],
             "triggers":[["click",function(){window.location.href = lnk[2]}]]
         }))
