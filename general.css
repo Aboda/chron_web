@@ -100,6 +100,10 @@ html,body {scroll-behavior: smooth; overflow-x: hidden;}
     color: white;
 }
 
+.main_text{
+    font-size: 50px;
+}
+
 .subtitle_clear_text{
     font-size: 24px;
     color: white;

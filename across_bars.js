@@ -2,10 +2,10 @@ function build_headbar(){
     let links = [
         ["Home","Inicio","https://synchronicity.cloud/#Home"],
         ["The App","La Aplicación","https://synchronicity.cloud/#TheApp"],
-        ["Features","Caracteristicas","https://synchronicity.cloud/"],
-        ["About Us","Acerca de Nosotros","https://synchronicity.cloud/"],
-        ["Reviews","Reseñas","https://synchronicity.cloud/"],
-        ["Contact","Contacto","https://synchronicity.cloud/"]
+        ["Features","Caracteristicas","https://synchronicity.cloud/#Features"],
+        ["About Us","Acerca de Nosotros","https://synchronicity.cloud/#AboutUs"],
+        ["Reviews","Reseñas","https://synchronicity.cloud/#Reviews"],
+        ["Contact","Contacto","https://synchronicity.cloud/#Contact"]
     ]
     
     let lng_index

@@ -20,7 +20,7 @@ function build_compound_main_message(){
     })
     link.append(get_it_icon)
     composition_container.append(link)
-    
+
     return composition_container
 }
 
@@ -48,6 +48,14 @@ function build_appearing_text_block(text){
     })
 }
 
+function build_big_black_letters(text){
+    return ao.qq({ 
+        "nodetype":"p",
+        "styles":["soft_appear","lim_w_text","wide_margin","main_text"],
+        "innerText":text
+    })
+}
+
 function build_home() {
     let section_container = ao.qq({
         "id":"Home",
@@ -70,18 +78,16 @@ function build_home() {
 
     let white_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["hor_flex","container_border_spacing"]
+        "styles":["hor_flex","container_border_spacing","row_height"]
     })
     section_container.append(white_sub_container)
 
 
-    white_sub_container.append(build_appearing_text_block("Synchronicity helps you analyze your google calendars for available timeframes of the size of your choice, generating a simple plain text output:"))
+    white_sub_container.append(build_appearing_text_block(`Synchronicity helps you find available timeframes in one or more google calendars of your choice.
+    
+    Have your availability written out with a single click.`))
 
-    white_sub_container.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
-    Fri 11/11, 9a - 1p, 3p - 5p
-    Mon 11/14, 10a - 12p, 1p - 5p
-    Tue 11/15, 9a - 10a, 11a - 1p, 2p - 5p
-    Wed 11/16, 9a - 11a, 12p - 1p, 2p - 5p`))
+    white_sub_container.append(build_big_black_letters(`Let the algorithm work for you`))
 
     return section_container
 }
@@ -104,19 +110,13 @@ function build_the_app(){
         "styles":["wide_margin"]
     }))
 
-    colored_sub_container.append(build_subtitle_block(`Control the parameters of your search:
-
-    Duration of the event.
-
-    Date and time range to schedule. 
-
-    Google calendars to evaluate.
-
-    And the ability to create the output adjusted to a different timezone.`))
+    colored_sub_container.append(build_subtitle_block(`Be precise in the dates, days, hours of the day, length of the sought available timeframe and the google calendars that you want to consider.
+    
+    Enjoy having a digital assistant sidebar to your google calendar that wil perform this basic yet recurrent task for people who manage busy agendas.`))
 
     let white_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["hor_flex","container_border_spacing"]
+        "styles":["hor_flex","container_border_spacing","row_height"]
     })
     section_container.append(white_sub_container)
 
@@ -128,16 +128,52 @@ function build_the_app(){
 }
 
 function build_features(){
+    let section_container = ao.qq({
+        "id":"Features",
+        "nodetype":"div",
+    })
 
+    let white_sub_container = ao.qq({
+        "nodetype":"div",
+        "styles":["hor_flex","container_border_spacing","row_height"]
+    })
+    section_container.append(white_sub_container)
+
+
+    white_sub_container.append(build_appearing_text_block("Synchronicity helps you analyze your google calendars for available timeframes of the size of your choice, generating a simple plain text output:"))
+
+    white_sub_container.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
+    Fri 11/11, 9a - 1p, 3p - 5p
+    Mon 11/14, 10a - 12p, 1p - 5p
+    Tue 11/15, 9a - 10a, 11a - 1p, 2p - 5p
+    Wed 11/16, 9a - 11a, 12p - 1p, 2p - 5p`))
+
+
+    return section_container
 }
+
 function build_about_us(){
-
+    let section_container = ao.qq({
+        "id":"AboutUs",
+        "nodetype":"div",
+    })
+    return section_container
 }
+
 function build_reviews(){
-
+    let section_container = ao.qq({
+        "id":"Reviews",
+        "nodetype":"div",
+    })
+    return section_container
 }
-function build_contact_us(){
 
+function build_contact_us(){
+    let section_container = ao.qq({
+        "id":"ContactUs",
+        "nodetype":"div",
+    })
+    return section_container
 }
 
 
@@ -145,10 +181,10 @@ function build_contact_us(){
 function main_build(){
     document.body.append(build_home())
     document.body.append(build_the_app())
-    //document.body.append(build_features())
-    //document.body.append(build_about_us())
-    //document.body.append(build_reviews())
-    //document.body.append(build_contact_us())
+    document.body.append(build_features())
+    document.body.append(build_about_us())
+    document.body.append(build_reviews())
+    document.body.append(build_contact_us())
 }
 
 function page_build(){
