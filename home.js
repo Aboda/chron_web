@@ -177,7 +177,7 @@ function build_about_us(){
         "id":"AboutUs",
         "nodetype":"div",
     })
-    
+
     return section_container
 }
 
@@ -205,18 +205,28 @@ function build_contact_us(){
     section_container.append(white_sub_container)
 
 
-    white_sub_container.append(ao.qq({
-        "nodetype":"email"
-    }))
 
-    white_sub_container.append(ao.qq({
+    white_sub_container.append(build_big_black_letters("Share your thought with us."))
+
+    white_sub_container.append(build_contact_pannel_container())
+
+
+    return section_container
+}
+
+function build_contact_pannel_container(){
+    let contact_pannel_container = ao.qq({
+        "nodetype":"div"
+    })
+    contact_pannel_container.append(ao.qq({
+        "nodetype":"input"
+    }))
+    contact_pannel_container.append(ao.qq({
         "nodetype":"div",
         "contenteditable":true,
         "styles":["comment_box"]
     }))
-
-
-    return section_container
+    return contact_pannel_container
 }
 
 
