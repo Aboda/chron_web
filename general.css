@@ -91,6 +91,14 @@ html,body {scroll-behavior: smooth; overflow-x: hidden;}
     background-image: linear-gradient(to top right, rgb(66,28,82), rgb(0,100,200));
 }
 
+.colored_row_3{
+    background-image: linear-gradient(to top left, rgb(66,28,82), rgb(0,100,200));
+}
+
+.colored_row_4{
+    background-image: linear-gradient(to bottom left, rgb(66,28,82), rgb(0,100,200));
+}
+
 .row_height{
     height: 600px;
 }
@@ -151,4 +159,11 @@ a:active {
     height: 4rem;
     width: 4rem;
     cursor:pointer;
+}
+
+.comment_box{
+    border-style: groove;
+    border-width: 3px;
+    width:250px;
+    height:200px;
 }
