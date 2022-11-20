@@ -152,10 +152,18 @@ const ao = {
       simple_item.node.remove();
       delete simple_item;
     },
-    controller_simple_delete(controller) {
-      for (let content in controller) {
-        this.simple_delete(controller[content])
+    size_change_monitor(){
+      let now = Date.now()
+      setTimeout(ao.resizer(),100,now)
+      ao.counters.last_resize = now
+    },
+    "size_watch":[],
+    resizer(timestamp){
+      if(ao.counters.last_resize == timestamp){
+        for (let elements in ao.size_watch){
+          let screen_size = [window.innerWidth,window.innerHeight]
+          elements.size_element(screen_size)
+        }
       }
-      delete controller;
     }
 };

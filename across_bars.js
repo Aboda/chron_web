@@ -20,7 +20,19 @@ function build_headbar(){
     }
     
     assert_lng_index()
-    
+
+    let display_mode
+
+    function assert_initial_display(){
+        if (window.innerWidth < 1000){
+            display_mode = 1
+        }else{
+            display_mode = 0
+        }
+    }
+
+    assert_initial_display()
+
     let headbar = ao.qq({
         "id":"headbar",
         "nodetype":"div",
@@ -49,7 +61,24 @@ function build_headbar(){
     }))
 
     headbar.append(appname_container)
+    document.body.append(headbar)
+    document.body.append(ao.qq({
+        "id":"antydisconfortbar",
+        "nodetype":"div",
+        "styles":["antydisconfortbar"]
+    }))
 
+    
+    if (display_mode == 0) {
+        build_displayed_options(links)
+    }
+
+    if (display_mode == 1) {
+        build_hamburger_options(links)
+    }    
+}
+
+function build_displayed_options(links){
     let links_container = ao.qq({
         "nodetype":"div",
         "styles":["hor_flex"]
@@ -64,14 +93,33 @@ function build_headbar(){
         }))
     }
 
-    headbar.append(links_container)
+    ao.simple.headbar.append(links_container)
+}
 
-    document.body.append(headbar)
-    document.body.append(ao.qq({
-        "id":"antydisconfortbar",
+function build_hamburger_options(links){
+    let burger_button = ao.qq({
         "nodetype":"div",
-        "styles":["antydisconfortbar"]
-    }))
+        "styles":["hamburger_button"],
+        "triggers":[["click",()=>{
+            ao.simple.full_screen_menu.node.requestFullscreen()
+        }]]
+    })
+    ao.simple.headbar.append(burger_button)
+
+    let fullscreen_item = ao.qq({
+        "id":"full_screen_menu",
+        "nodetype":"div",
+        "styles":["vertical_list"]
+    })
+    
+    for (let lnk of links){
+        fullscreen_item.append(ao.qq({
+            "nodetype":"div",
+            "innerText":lnk[lng_index],
+            "styles":["internal_nav_button","minimal_spacing"],
+            "triggers":[["click",function(){window.location.href = lnk[2]}]]
+        }))
+    }
 }
 
 function build_closer_line(){

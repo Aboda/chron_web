@@ -141,3 +141,10 @@ a:active {
 .wide_margin{
     margin:3rem;
 }
+
+.hamburger_button{
+    background-color: orangered;
+    height: 4rem;
+    width: 4rem;
+    cursor:pointer;
+}
