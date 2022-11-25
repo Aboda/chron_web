@@ -157,8 +157,8 @@ const ao = {
     },
     size_change_monitor(){
       let now = Date.now()
-      setTimeout(ao.resizer(),100,now)
       ao.counters.last_resize = now
+      setTimeout(function(){ao.resizer(now)},100)
     },
     "size_watch":[],
     resizer(timestamp){
