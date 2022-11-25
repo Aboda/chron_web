@@ -184,7 +184,7 @@ function build_about_us(){
     })
     section_container.append(colored_sub_container)
 
-    colored_sub_container.append(build_subtitle_block(`We at Synchronicity are modern professionals looking to actively participate in helping those interested in making their activities simpler and more efficient. 
+    colored_sub_container.append(build_subtitle_block(`We at Synchronicity are modern professionals looking to actively participate helping those interested in making their activities simpler and more efficient. 
     
     We look forward to generate solutions that improves the individual relationship we all have with time.`))
 
