@@ -64,7 +64,7 @@ function build_home() {
 
     let colored_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["colored_row","hor_flex","container_border_spacing"]
+        "styles":["colored_row","hor_flex"]
     })
     section_container.append(colored_sub_container)
 
@@ -78,7 +78,7 @@ function build_home() {
 
     let white_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["hor_flex","container_border_spacing","row_height"]
+        "styles":["hor_flex","row_height"]
     })
     section_container.append(white_sub_container)
 
@@ -100,7 +100,7 @@ function build_the_app(){
 
     let colored_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["colored_row_2","hor_flex","container_border_spacing"]
+        "styles":["colored_row_2","hor_flex"]
     })
     section_container.append(colored_sub_container)
 
@@ -116,7 +116,7 @@ function build_the_app(){
 
     let white_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["hor_flex","container_border_spacing","row_height"]
+        "styles":["hor_flex","row_height"]
     })
     section_container.append(white_sub_container)
 
@@ -139,7 +139,7 @@ function build_features(){
 
     let colored_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["colored_row_3","hor_flex","container_border_spacing"]
+        "styles":["colored_row_3","hor_flex"]
     })
     section_container.append(colored_sub_container)
 
@@ -155,7 +155,7 @@ function build_features(){
 
     let white_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["hor_flex","container_border_spacing","row_height"]
+        "styles":["hor_flex","row_height"]
     })
     section_container.append(white_sub_container)
 
@@ -180,7 +180,7 @@ function build_about_us(){
 
     let colored_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["colored_row_3","hor_flex","container_border_spacing","row_height"]
+        "styles":["colored_row_3","hor_flex","row_height"]
     })
     section_container.append(colored_sub_container)
 
@@ -210,13 +210,13 @@ function build_contact_us(){
 
     let white_sub_container = ao.qq({
         "nodetype":"div",
-        "styles":["hor_flex","container_border_spacing","row_height"]
+        "styles":["hor_flex","row_height"]
     })
     section_container.append(white_sub_container)
 
 
 
-    white_sub_container.append(build_big_black_letters("Share your thought with us."))
+    white_sub_container.append(build_big_black_letters("Share your thoughts with us."))
 
     white_sub_container.append(build_contact_pannel_container())
 
@@ -237,7 +237,7 @@ function build_contact_pannel_container(){
     contact_pannel_container.append(ao.qq({
         "nodetype":"div",
         "contenteditable":true,
-        "styles":["comment_box"]
+        "styles":["comment_box","minimal_spacing"]
     }))
     contact_pannel_container.append(ao.qq({
         "nodetype":"button",

@@ -33,10 +33,6 @@ html,body {scroll-behavior: smooth; overflow-x: hidden;}
     border-right:2rem;
 }
 
-.container_border_spacing{
-    border:2.5rem;
-}
-
 .hor_flex{
     display: flex;
     flex-flow: row wrap;
@@ -123,7 +119,6 @@ html,body {scroll-behavior: smooth; overflow-x: hidden;}
 
 .minimal_spacing{
     margin: 2rem;
-    border: 2rem;
 }
 
 a:link {
