@@ -226,7 +226,9 @@ function build_contact_us(){
 
 function build_contact_pannel_container(){
     let contact_pannel_container = ao.qq({
-        "nodetype":"div"
+        "nodetype":"div",
+        "id":"Contact",
+        "styles":["vertical_list"]
     })
     contact_pannel_container.append(ao.qq({
         "nodetype":"input",
@@ -237,7 +239,17 @@ function build_contact_pannel_container(){
         "contenteditable":true,
         "styles":["comment_box"]
     }))
+    contact_pannel_container.append(ao.qq({
+        "nodetype":"button",
+        "id":"contact_button",
+        "value":"Send Message",
+        "disabled":true
+    }))
     return contact_pannel_container
+}
+
+function validate_contact_form() {
+    console.log("contact validation fired")
 }
 
 

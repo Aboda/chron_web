@@ -88,7 +88,8 @@ const ao = {
       "overflowX":"style",
       "transition":"style",
       "contenteditable":true,
-      "placeholder":true
+      "placeholder":true,
+      "disabled":true
     },
     qq (qq,container) {
       this.aint_got_no_id(qq);
@@ -163,6 +164,7 @@ const ao = {
     resizer(timestamp){
       console.log("triggered resize")
       if(ao.counters.last_resize == timestamp){
+        console.log("resize fired")
         for (let elements in ao.size_watch){
           let screen_size = [window.innerWidth,window.innerHeight]
           elements.size_element(screen_size)
