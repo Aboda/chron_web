@@ -191,17 +191,6 @@ function build_about_us(){
     return section_container
 }
 
-function build_reviews(){
-    let section_container = ao.qq({
-        "id":"Reviews",
-        "nodetype":"div",
-    })
-
-
-
-    return section_container
-}
-
 function build_contact_us(){
     let section_container = ao.qq({
         "id":"ContactUs",
@@ -259,7 +248,6 @@ function main_build(){
     document.body.append(build_the_app())
     document.body.append(build_features())
     document.body.append(build_about_us())
-    document.body.append(build_reviews())
     document.body.append(build_contact_us())
 }
 

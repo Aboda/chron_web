@@ -162,7 +162,7 @@ const ao = {
     },
     "size_watch":[],
     resizer(timestamp){
-      console.log("triggered resize")
+      console.log("rz-"+timestamp+" stored "+ao.counters.last_resize+"match "+ (ao.counters.last_resize == timestamp) )
       if(ao.counters.last_resize == timestamp){
         console.log("resize fired")
         for (let elements in ao.size_watch){

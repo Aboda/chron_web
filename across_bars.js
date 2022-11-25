@@ -4,7 +4,6 @@ function build_headbar(){
         ["The App","La Aplicación","https://synchronicity.cloud/#TheApp"],
         ["Features","Caracteristicas","https://synchronicity.cloud/#Features"],
         ["About Us","Acerca de Nosotros","https://synchronicity.cloud/#AboutUs"],
-        ["Reviews","Reseñas","https://synchronicity.cloud/#Reviews"],
         ["Contact","Contacto","https://synchronicity.cloud/#Contact"]
     ]
     
