@@ -170,3 +170,13 @@ function build_closer_line(){
 
     document.body.append(container)
 }
+
+function menu_coordinator() {
+    let coordinator = {
+        size_element(width,height){
+            console.log("Sizing menu coordinator",width,height)
+        },
+    }
+    
+    ao.size_watch.append(coordinator)
+}

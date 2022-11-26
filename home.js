@@ -160,13 +160,9 @@ function build_features(){
     section_container.append(white_sub_container)
 
 
-    white_sub_container.append(build_appearing_text_block("Synchronicity helps you analyze your google calendars for available timeframes of the size of your choice, generating a simple plain text output:"))
+    white_sub_container.append(build_appearing_text_block("The application was though as a tool to quickly evaluate the calendars of your choice to seek availability, not unlike a secretary managing peoples and spaces schedules, as well as consultants reserving timeframes in their schedule for diverse activities."))
 
-    white_sub_container.append(build_appearing_text_block(`Thu 11/10, 9a - 1p, 2p - 5p
-    Fri 11/11, 9a - 1p, 3p - 5p
-    Mon 11/14, 10a - 12p, 1p - 5p
-    Tue 11/15, 9a - 10a, 11a - 1p, 2p - 5p
-    Wed 11/16, 9a - 11a, 12p - 1p, 2p - 5p`))
+    white_sub_container.append(build_big_black_letters("Offload this repetitive task from your mind."))
 
 
     return section_container

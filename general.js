@@ -164,8 +164,7 @@ const ao = {
     resizer(timestamp){
       if(ao.counters.last_resize == timestamp){
         for (let elements in ao.size_watch){
-          let screen_size = [window.innerWidth,window.innerHeight]
-          elements.size_element(screen_size)
+          elements.size_element(window.innerWidth,window.innerHeight)
         }
       }
     }
