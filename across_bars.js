@@ -100,7 +100,7 @@ function build_hamburger_options(links){
         "nodetype":"div",
         "styles":["hamburger_button"],
         "triggers":[["click",()=>{
-            ao.simple.full_screen_menu.node.requestFullscreen()
+            create_overlay_menu()
         }]]
     })
     ao.simple.headbar.node.append(burger_button)
@@ -119,6 +119,11 @@ function build_hamburger_options(links){
             "triggers":[["click",function(){window.location.href = lnk[2]}]]
         }))
     }
+}
+
+function create_overlay_menu() {
+
+
 }
 
 function build_closer_line(){
@@ -175,8 +180,7 @@ function menu_coordinator() {
     let coordinator = {
         size_element(width,height){
             console.log("Sizing menu coordinator",width,height)
-        },
+        }
     }
-
     ao.size_watch.push(coordinator)
 }

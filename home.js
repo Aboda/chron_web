@@ -82,11 +82,11 @@ function build_home() {
     })
     section_container.append(white_sub_container)
 
-    white_sub_container.append(build_big_black_letters(`Let the algorithm work for you`))
-
     white_sub_container.append(build_appearing_text_block(`Synchronicity helps you find available timeframes in one or more google calendars of your choice.
     
     Have your availability written out with a single click.`))
+    
+    white_sub_container.append(build_big_black_letters(`Let the algorithm work for you`))
 
     return section_container
 }
@@ -158,11 +158,9 @@ function build_features(){
     })
     section_container.append(white_sub_container)
 
-
-    white_sub_container.append(build_appearing_text_block("The application was though as a tool to quickly evaluate the calendars of your choice to seek availability, not unlike a secretary managing peoples and spaces schedules, as well as consultants reserving timeframes in their schedule for diverse activities."))
+    white_sub_container.append(build_appearing_text_block("The application was though as a tool to quickly evaluate the calendars of your choice to seek availability, as a part of secretarial work or for consultants reserving timeframes in their schedule for diverse activities."))
 
     white_sub_container.append(build_big_black_letters("Offload this repetitive task from your mind."))
-
 
     return section_container
 }
@@ -198,12 +196,9 @@ function build_contact_us(){
     })
     section_container.append(white_sub_container)
 
-
-
-    white_sub_container.append(build_big_black_letters("Share your thoughts with us."))
-
     white_sub_container.append(build_contact_pannel_container())
 
+    white_sub_container.append(build_big_black_letters("Share your thoughts with us."))
 
     return section_container
 }
