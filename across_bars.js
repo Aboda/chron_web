@@ -177,6 +177,6 @@ function menu_coordinator() {
             console.log("Sizing menu coordinator",width,height)
         },
     }
-    
-    ao.size_watch.append(coordinator)
+
+    ao.size_watch.push(coordinator)
 }

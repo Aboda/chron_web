@@ -82,12 +82,11 @@ function build_home() {
     })
     section_container.append(white_sub_container)
 
+    white_sub_container.append(build_big_black_letters(`Let the algorithm work for you`))
 
     white_sub_container.append(build_appearing_text_block(`Synchronicity helps you find available timeframes in one or more google calendars of your choice.
     
     Have your availability written out with a single click.`))
-
-    white_sub_container.append(build_big_black_letters(`Let the algorithm work for you`))
 
     return section_container
 }
