@@ -74,6 +74,7 @@ function build_headbar(){
 
     if (display_mode == 1) {
         build_hamburger_options(links)
+        menu_coordinator()
     }    
 }
 
