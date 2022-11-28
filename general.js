@@ -53,6 +53,7 @@ const ao = {
       "select":true,
       "span":true,
       "sub":true,
+      "svg":true,
       "textarea":true,
       "table":true,
       "tr":true,
