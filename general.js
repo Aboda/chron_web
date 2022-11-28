@@ -163,7 +163,7 @@ const ao = {
     "size_watch":[],
     resizer(timestamp){
       if(ao.counters.last_resize == timestamp){
-        for (let elements in ao.size_watch){
+        for (let elements of ao.size_watch){
           console.log("resizing"
           ,elements)
           elements.size_element()
