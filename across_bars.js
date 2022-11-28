@@ -131,7 +131,7 @@ function build_hamburger_options(links){
 function svg_from_string(string){
     var parser = new DOMParser();
     var doc = parser.parseFromString(string, "image/svg+xml");
-    return doc[0]
+    return doc.childNodes[0]
 }
 
 function create_overlay_menu() {
