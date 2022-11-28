@@ -89,7 +89,8 @@ const ao = {
       "transition":"style",
       "contenteditable":true,
       "placeholder":true,
-      "disabled":true
+      "disabled":true,
+      "innerHTML":true
     },
     qq (qq,container) {
       this.aint_got_no_id(qq);
@@ -164,8 +165,6 @@ const ao = {
     resizer(timestamp){
       if(ao.counters.last_resize == timestamp){
         for (let elements of ao.size_watch){
-          console.log("resizing"
-          ,elements)
           elements.size_element()
         }
       }
