@@ -179,8 +179,8 @@ function build_closer_line(){
 
 function menu_coordinator() {
     let coordinator = {
-        size_element(width,height){
-            console.log("Sizing menu coordinator",width,height)
+        size_element(){
+            console.log("Sizing menu coordinator",innerWidth,innerHeight)
         }
     }
     ao.size_watch.push(coordinator)
