@@ -164,6 +164,8 @@ const ao = {
     resizer(timestamp){
       if(ao.counters.last_resize == timestamp){
         for (let elements in ao.size_watch){
+          console.log("resizing"
+          ,elements)
           elements.size_element()
         }
       }

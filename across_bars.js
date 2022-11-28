@@ -179,7 +179,7 @@ function build_closer_line(){
 
 function menu_coordinator() {
     let coordinator = {
-        size_element(){
+        size_element() {
             console.log("Sizing menu coordinator",innerWidth,innerHeight)
         }
     }
