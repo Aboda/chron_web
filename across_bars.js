@@ -101,13 +101,15 @@ function build_hamburger_options(links){
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>`
 
     let burger_button = ao.qq({
-        "nodetype":"svg",
+        "nodetype":"div",
         "styles":["hamburger_button"],
         "triggers":[["click",()=>{
             create_overlay_menu()
-        }]],
-        "innerHTML":burger_svg
+        }]]
     })
+    
+    burger_button.append(svg_from_string(burger_svg))
+    
     ao.simple.headbar.node.append(burger_button)
 
     let fullscreen_item = ao.qq({
@@ -124,6 +126,12 @@ function build_hamburger_options(links){
             "triggers":[["click",function(){window.location.href = lnk[2]}]]
         }))
     }
+}
+
+function svg_from_string(string){
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(string, "image/svg+xml");
+    return doc[0]
 }
 
 function create_overlay_menu() {
