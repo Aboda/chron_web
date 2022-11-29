@@ -81,7 +81,7 @@ function build_headbar(){
 function build_displayed_options(links){
     let links_container = ao.qq({
         "nodetype":"div",
-        "styles":["hor_flex","vertical_list"]
+        "styles":["hor_flex"]
     })
   
     for (let lnk of links){
@@ -102,7 +102,7 @@ function build_hamburger_options(links){
 
     let burger_button = ao.qq({
         "nodetype":"div",
-        "styles":["hamburger_button"],
+        "styles":["hamburger_button","vertical_list"],
         "triggers":[["click",()=>{
             create_overlay_menu()
         }]]
