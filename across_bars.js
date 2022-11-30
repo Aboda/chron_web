@@ -115,7 +115,7 @@ function build_hamburger_options(links){
     let fullscreen_item = ao.qq({
         "id":"full_screen_menu",
         "nodetype":"div",
-        "styles":["vertical_list"]
+        "styles":["vertical_list","color_contrast_1"]
     })
     
     for (let lnk of links){
