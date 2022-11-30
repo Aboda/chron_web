@@ -125,6 +125,7 @@ function build_hamburger_options(links){
             "styles":["internal_nav_button","minimal_spacing"],
             "triggers":[["click",function(){
                 window.location.href = lnk[2]
+                remove_overlay_menu()
             }]]
         }))
     }
