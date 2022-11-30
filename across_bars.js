@@ -104,7 +104,7 @@ function build_hamburger_options(links){
         "nodetype":"div",
         "styles":["hamburger_button","vertical_list"],
         "triggers":[["click",()=>{
-            create_overlay_menu()
+            add_overlay_menu()
         }]]
     })
     
@@ -123,7 +123,9 @@ function build_hamburger_options(links){
             "nodetype":"div",
             "innerText":lnk[0],
             "styles":["internal_nav_button","minimal_spacing"],
-            "triggers":[["click",function(){window.location.href = lnk[2]}]]
+            "triggers":[["click",function(){
+                window.location.href = lnk[2]
+            }]]
         }))
     }
 }
@@ -134,8 +136,12 @@ function svg_from_string(string){
     return doc.childNodes[0]
 }
 
-function create_overlay_menu() {
+function add_overlay_menu() {
     document.body.append(ao.simple.full_screen_menu.node)
+}
+
+function remove_overlay_menu() {
+    ao.simple.full_screen_menu.node.remove()
 }
 
 function build_closer_line(){
