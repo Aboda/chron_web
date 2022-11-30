@@ -135,8 +135,7 @@ function svg_from_string(string){
 }
 
 function create_overlay_menu() {
-
-
+    document.body.append(ao.simple.full_screen_menu.node)
 }
 
 function build_closer_line(){

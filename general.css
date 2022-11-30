@@ -161,3 +161,11 @@ a:active {
     width:250px;
     height:200px;
 }
+
+#full_screen_menu{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
