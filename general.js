@@ -88,7 +88,7 @@ const ao = {
       "fontSize":"style",
       "overflowX":"style",
       "transition":"style",
-      "contenteditable":true,
+      "contentEditable":true,
       "placeholder":true,
       "disabled":true,
       "innerHTML":true

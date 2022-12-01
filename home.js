@@ -218,7 +218,7 @@ function build_contact_pannel_container(){
     contact_pannel_container.append(ao.qq({
         "nodetype":"div",
         "id":"message_box",
-        "contenteditable":true,
+        "contentEditable":true,
         "styles":["comment_box","minimal_spacing"],
         "triggers":[["keypress",function(){validate_contact_form()}]]
     }))
