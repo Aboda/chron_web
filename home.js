@@ -226,7 +226,8 @@ function build_contact_pannel_container(){
         "nodetype":"button",
         "id":"contact_button",
         "value":"Send Message",
-        "disabled":true
+        "disabled":true,
+        "triggers":[["click",function(){send_contact_message()}]]
     }))
     return contact_pannel_container
 }
@@ -241,7 +242,17 @@ function validate_contact_form() {
     }
 }
 
+function send_contact_message(){
+    let email_input = ao.simple.email_address.node.value
+    let message_input = ao.simple.message_box.node.innerText
+    let inbox_address = "https://script.google.com/macros/s/AKfycbzVVYoAPPkkfnwM_VgvYOaBBThthwd70_wIXLU61u0SdQD7HHqqYtdkyozvdVH3cuZ3Pg/exec"
 
+    function message_received(reply){
+        console.log("message_sent",reply)
+    }
+
+    ao.fe("POST",inbox_address,message_received,{"c":email_input,"m":message_input})
+}
 
 function main_build(){
     document.body.append(build_home())
