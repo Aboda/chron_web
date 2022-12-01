@@ -133,11 +133,11 @@
             reply.code = 200
             return reply
         },
+
         "deflect":(req,report,circle_pass)=>{
             let data = ""
             req.on('data', chunk => {
                 data = data + chunk
-                console.log('A chunk of data has arrived: ', chunk);
             });
             req.on('end', () => {
                 circle_pass.tasks.simple_post(data)
@@ -148,6 +148,7 @@
             reply.code = 200
             return reply
         },
+
         "simple_post":(postData)=>{
             var options = {
             hostname: 'script.google.com',
