@@ -213,14 +213,14 @@ function build_contact_pannel_container(){
         "nodetype":"input",
         "id":"email_address",
         "placeholder":"preferred contact",
-        "triggers":[["keypress",validate_contact_form()]]
+        "triggers":[["keypress",function(){validate_contact_form()}]]
     }))
     contact_pannel_container.append(ao.qq({
         "nodetype":"div",
         "id":"message_box",
         "contenteditable":true,
         "styles":["comment_box","minimal_spacing"],
-        "triggers":[["keypress",validate_contact_form()]]
+        "triggers":[["keypress",function(){validate_contact_form()}]]
     }))
     contact_pannel_container.append(ao.qq({
         "nodetype":"button",
