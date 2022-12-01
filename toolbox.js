@@ -140,13 +140,13 @@
                 console.log('A chunk of data has arrived: ', chunk);
             });
             req.on('end', () => {
-                let reply =  {}
-                reply.content = 
-                `message stored`
-                reply.code = 200
                 circle_pass.tasks.simple_post(data)
-                return reply
             })
+            let reply =  {}
+            reply.content = 
+            `message stored`
+            reply.code = 200
+            return reply
         },
         "simple_post":(postData)=>{
             var options = {

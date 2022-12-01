@@ -251,6 +251,8 @@ function send_contact_message(){
         console.log("message_sent",reply)
     }
 
+    console.log("sending",email_input,message_input)
+    
     ao.fe("POST",inbox_address,message_received,{"c":email_input,"m":message_input})
 }
 
