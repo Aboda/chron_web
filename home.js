@@ -245,7 +245,7 @@ function validate_contact_form() {
 function send_contact_message(){
     let email_input = ao.simple.email_address.node.value
     let message_input = ao.simple.message_box.node.innerText
-    let inbox_address = "https://script.google.com/macros/s/AKfycbzVVYoAPPkkfnwM_VgvYOaBBThthwd70_wIXLU61u0SdQD7HHqqYtdkyozvdVH3cuZ3Pg/exec"
+    let inbox_address = "https://script.google.com/macros/s/AKfycbysqjvZoFfmIJPpqV6a8hCz6X0qfgr9h1-L42KhLbxHTMa9_niK893333kNp303T2mSTg/exec"
 
     function message_received(reply){
         console.log("message_sent",reply)
