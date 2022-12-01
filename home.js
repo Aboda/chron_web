@@ -211,12 +211,16 @@ function build_contact_pannel_container(){
     })
     contact_pannel_container.append(ao.qq({
         "nodetype":"input",
-        "placeholder":"contact email"
+        "id":"email_address",
+        "placeholder":"preferred contact",
+        "triggers":[["keypress",validate_contact_form()]]
     }))
     contact_pannel_container.append(ao.qq({
         "nodetype":"div",
+        "id":"message_box",
         "contenteditable":true,
-        "styles":["comment_box","minimal_spacing"]
+        "styles":["comment_box","minimal_spacing"],
+        "triggers":[["keypress",validate_contact_form()]]
     }))
     contact_pannel_container.append(ao.qq({
         "nodetype":"button",
@@ -228,7 +232,13 @@ function build_contact_pannel_container(){
 }
 
 function validate_contact_form() {
-    console.log("contact validation fired")
+    let email_input = ao.simple.email_address.node.value.length
+    let message_input = ao.simple.message_box.node.innerText.length
+    let controlled_button = ao.simple.contact_button.node
+    
+    if (email_input > 0 && message_input > 0) {controlled_button.disabled = false}else{
+        controlled_button.disabled = true
+    }
 }
 
 
