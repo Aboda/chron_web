@@ -132,7 +132,50 @@
             `
             reply.code = 200
             return reply
-        }
+        },
+        "deflect":(req,report,circle_pass)=>{
+            let data = ""
+            req.on('data', chunk => {
+                data = data + chunk
+                console.log('A chunk of data has arrived: ', chunk);
+            });
+            req.on('end', () => {
+                let reply =  {}
+                reply.content = 
+                `message stored`
+                reply.code = 200
+                circle_pass.tasks.simple_post(data)
+                return reply
+            })
+        },
+        "simple_post":(postData)=>{
+            var options = {
+            hostname: 'script.google.com',
+            port: 443,
+            path: '/macros/s/AKfycbyJogC4Deqc5uktxX46nt9ZjtQi4WwJgZl66hvH6CWrjzzEVn2icwRq1ZhtA6yco025QA/exec',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Length': postData.length
+                }
+            };
+
+            var req = https.request(options, (res) => {
+            console.log('statusCode:', res.statusCode);
+            console.log('headers:', res.headers);
+
+            res.on('data', (d) => {
+                process.stdout.write(d);
+            });
+            });
+
+            req.on('error', (e) => {
+            console.error(e);
+            });
+
+            req.write(postData);
+            req.end();
+        },
     },
     "templates":{
         "html_base":()=>{
@@ -183,6 +226,10 @@
                 "loc":"https://synchronicity.cloud/favicon.ico",
                 "special":"favicon",
                 "route":"./basic.ico"
+            },
+            "messages":{
+                "loc":"https://synchronicity.cloud/messages",
+                "special":"deflect"
             },
             "midlogo.png":{
                 "loc":"https://synchronicity.cloud/midlogo.png",

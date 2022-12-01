@@ -1,6 +1,3 @@
-/*
-  base of homemade framework 2021/10/14
-*/
 const ao = {
     "lng":document.documentElement.lang.slice(0,2),
     zyx (tag,thing,show) {

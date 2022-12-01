@@ -158,7 +158,7 @@ function build_features(){
     })
     section_container.append(white_sub_container)
 
-    white_sub_container.append(build_appearing_text_block("The application was though as a tool to quickly evaluate the calendars of your choice to seek availability, as a part of secretarial work or for consultants reserving timeframes in their schedule for diverse activities."))
+    white_sub_container.append(build_appearing_text_block("The application was thought as a tool to quickly evaluate the calendars of your choice to seek availability, as a part of secretarial work or for consultants reserving timeframes in their schedule for diverse activities."))
 
     white_sub_container.append(build_big_black_letters("Offload this repetitive task from your mind."))
 
@@ -245,7 +245,7 @@ function validate_contact_form() {
 function send_contact_message(){
     let email_input = ao.simple.email_address.node.value
     let message_input = ao.simple.message_box.node.innerText
-    let inbox_address = "https://script.google.com/macros/s/AKfycbysqjvZoFfmIJPpqV6a8hCz6X0qfgr9h1-L42KhLbxHTMa9_niK893333kNp303T2mSTg/exec"
+    let inbox_address = "https://synchronicity.cloud/messages"
 
     function message_received(reply){
         console.log("message_sent",reply)
