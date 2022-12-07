@@ -18,7 +18,7 @@ function build_compound_main_message(){
         "src":"https://synchronicity.cloud/gwm.png",
         "styles":["internal_nav_button"]
     })
-    link.append(get_it_icon)
+    //link.append(get_it_icon)
     composition_container.append(link)
 
     return composition_container
