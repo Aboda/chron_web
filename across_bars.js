@@ -55,7 +55,7 @@ function build_headbar(){
     appname_container.append(ao.qq({
         "id":"appname",
         "nodetype":"b",
-        "innerText":"Synchronicity (Beta)",
+        "innerText":"Synchronicity",
         "styles":["half_space_left"]
     }))
 
@@ -70,12 +70,14 @@ function build_headbar(){
     
     if (display_mode == 0) {
         build_displayed_options(links)
+        
     }
 
     if (display_mode == 1) {
         build_hamburger_options(links)
-        menu_coordinator()
-    }    
+    }
+    
+    menu_coordinator()
 }
 
 function build_displayed_options(links){
@@ -198,6 +200,12 @@ function build_closer_line(){
 function menu_coordinator() {
     let coordinator = {
         size_element() {
+            let treshold = 1000
+            if (window.innerWidth < treshold){
+                //convert to burger
+            }else{
+                //convert to webpage
+            }
             console.log("Sizing menu coordinator",innerWidth,innerHeight)
         }
     }
