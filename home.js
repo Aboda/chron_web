@@ -243,8 +243,11 @@ function validate_contact_form() {
 }
 
 function send_contact_message(){
-    let email_input = ao.simple.email_address.node.value
-    let message_input = ao.simple.message_box.node.innerText
+    let email_device = ao.simple.email_address.node
+    let message_device = ao.simple.message_box.node
+    let controlled_button = ao.simple.contact_button.node
+    let email_input = email_device.value
+    let message_input = message_device.innerText
     let inbox_address = "https://synchronicity.cloud/messages"
 
     function message_received(reply){
@@ -254,6 +257,10 @@ function send_contact_message(){
     console.log("sending",email_input,message_input)
 
     ao.fe("POST",inbox_address,message_received,JSON.stringify({"c":email_input,"m":message_input}))
+
+    email_device.value = ""
+    message_device.innerText = ""
+    controlled_button.disabled = true
 }
 
 function main_build(){
