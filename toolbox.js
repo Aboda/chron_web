@@ -163,14 +163,13 @@
             };
 
             var req = https.request(options, (res) => {
-
-            res.on('data', (d) => {
-                process.stdout.write(d);
-            });
+                res.on('data', (d) => {
+                    process.stdout.write(d);
+                });
             });
 
             req.on('error', (e) => {
-            console.error(e);
+                console.error(e);
             });
 
             req.write(postData);
