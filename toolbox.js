@@ -157,7 +157,7 @@
             path: endpoint,
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/json',
                 'Content-Length': postData.length
                 }
             };
@@ -234,7 +234,7 @@
             "error-report":{
                 "loc":"https://synchronicity.cloud/error-report",
                 "special":"deflect",
-                "endpoint":"https://script.google.com/macros/s/AKfycbzZ5mBQ1D6vlMCGwXdtzi4DMAfiBFBDOspH31K0-kQrXYc54n0E3ZnmJM-ib4z3_KcBaQ/exec"
+                "endpoint":"https://script.google.com/macros/s/AKfycbwUQxmgY6MXD81aqGugvxqSD62bvPCuMi4qvsvE-iDTw3SNN7dsAkrzkEwhiqacsUVjEA/exec"
             },
             "midlogo.png":{
                 "loc":"https://synchronicity.cloud/midlogo.png",
