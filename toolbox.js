@@ -135,12 +135,13 @@
         },
 
         "deflect":(req,report,circle_pass)=>{
+            let params = circle_pass.domains[report.host][report.s1]
             let data = ""
             req.on('data', chunk => {
                 data = data + chunk
             });
             req.on('end', () => {
-                circle_pass.tasks.simple_post(data)
+                circle_pass.tasks.simple_post(data,params.endpoint)
             })
             let reply =  {}
             reply.content = 
@@ -149,11 +150,11 @@
             return reply
         },
 
-        "simple_post":(postData)=>{
+        "simple_post":(postData,endpoint)=>{
             var options = {
             hostname: 'script.google.com',
             port: 443,
-            path: 'https://script.google.com/macros/s/AKfycbysqjvZoFfmIJPpqV6a8hCz6X0qfgr9h1-L42KhLbxHTMa9_niK893333kNp303T2mSTg/exec',
+            path: endpoint,
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -162,8 +163,6 @@
             };
 
             var req = https.request(options, (res) => {
-            console.log('statusCode:', res.statusCode);
-            console.log('headers:', res.headers);
 
             res.on('data', (d) => {
                 process.stdout.write(d);
@@ -230,7 +229,13 @@
             },
             "messages":{
                 "loc":"https://synchronicity.cloud/messages",
-                "special":"deflect"
+                "special":"deflect",
+                "endpoint":"https://script.google.com/macros/s/AKfycbyJogC4Deqc5uktxX46nt9ZjtQi4WwJgZl66hvH6CWrjzzEVn2icwRq1ZhtA6yco025QA/exec"
+            },
+            "error-report":{
+                "loc":"https://synchronicity.cloud/error-report",
+                "special":"deflect",
+                "endpoint":"https://script.google.com/macros/s/AKfycbyq8KlnpAYSzUXZi2qCqPFvr8ZoptZNPDfPrE6ullFgWvW9I0tput3tYW_m1iU8XyhuHA/exec"
             },
             "midlogo.png":{
                 "loc":"https://synchronicity.cloud/midlogo.png",
