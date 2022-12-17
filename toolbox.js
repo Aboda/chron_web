@@ -158,7 +158,7 @@
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Content-Length': postData.length
+                'Content-Length': postData.length + 1
                 }
             };
 
