@@ -251,10 +251,8 @@ function send_contact_message(){
     let inbox_address = "https://synchronicity.cloud/messages"
 
     function message_received(reply){
-        console.log("message_sent",reply)
+        //do nothing
     }
-
-    console.log("sending",email_input,message_input)
 
     ao.fe("POST",inbox_address,message_received,JSON.stringify({"c":email_input,"m":message_input}))
 
