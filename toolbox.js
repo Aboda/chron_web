@@ -141,7 +141,7 @@
                 data = data + chunk
             });
             req.on('end', () => {
-                console.log(data)
+                console.log(data.length,data)
                 circle_pass.tasks.simple_post(data,params.endpoint)
             })
             let reply =  {}
@@ -159,7 +159,7 @@
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Content-Length': postData.length + 5
+                'Content-Length': postData.length
                 }
             };
 
