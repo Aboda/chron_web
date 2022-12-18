@@ -141,6 +141,7 @@
                 data = data + chunk
             });
             req.on('end', () => {
+                console.log(data)
                 circle_pass.tasks.simple_post(data,params.endpoint)
             })
             let reply =  {}
