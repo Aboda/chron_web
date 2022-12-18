@@ -234,7 +234,7 @@
             "error-report":{
                 "loc":"https://synchronicity.cloud/error-report",
                 "special":"deflect",
-                "endpoint":"https://script.google.com/macros/s/AKfycbyz9S7CeeMiJlKLxVv4OUPgzxPg0QFprTlUQ7qx-jGz_HlXJOKwhEyKR0wmXoePWAzGkQ/exec"
+                "endpoint":"https://script.google.com/macros/s/AKfycbzPKqajfX392IqQy2cIa--b6BKDOoHrtq-m0DobLoRvlVBD_vBugTW-zI7xrKzybclVAg/exec"
             },
             "midlogo.png":{
                 "loc":"https://synchronicity.cloud/midlogo.png",
