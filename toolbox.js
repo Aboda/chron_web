@@ -352,6 +352,31 @@
                     "./across_bars.js",
                     "./pp.js"
                 ]
+            },
+            "error_visualizer":{
+                "loc":"https://synchronicity.cloud/error_visualizer",
+                "sitemap":false,
+                "index":false,
+                "title":{
+                    "es":"Visor de errores",
+                    "en":"Error Visualizer"
+                },
+                "short":{
+                    "es":"VE",
+                    "en":"EV"
+                },
+                "descrip":{
+                    "es":"Herramienta de diagnostico",
+                    "en":"Diagnosis tool"
+                },
+                "css":[
+                    "./general.css"
+                ],
+                "js":[
+                    "./general.js",
+                    "./across_bars.js",
+                    "./error_visualizer.js"
+                ]
             }
         }
     }
