@@ -4,6 +4,7 @@ function fill_data_displays () {
 
     let settings_layout = ao.simple.settings_layout.node
 
+
     settings_layout.innerText = JSON.stringify(data.last_event_report,null,2,true)
 
     let settings_change = ao.simple.settings_change.node
@@ -13,7 +14,7 @@ function fill_data_displays () {
 function assemble_data_receptor(){
     let container = ao.qq({
         "nodetype":"div",
-        "id":"error_report_data_input_contianer",
+        "id":"error_report_data_input_container",
         "styles":["vertical_list"]
     })
     document.body.append(container)
@@ -79,6 +80,9 @@ function assemble_availability_map(){
 
 function page_build(){
     assemble_data_receptor()
+    assemble_settings_display()
+    assemble_events_pool()
+    assemble_availability_map()
 }
 
 window.onload = () => {
