@@ -172,5 +172,7 @@ a:active {
 }
 
 .data_input{
-    width: 100%; 
+    width: 100%;
+    background-color: aquamarine;
+    max-height: 10rem;
 }
