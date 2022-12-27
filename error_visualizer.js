@@ -3,7 +3,7 @@ function fill_data_displays () {
     console.log(data)
 
     let settings_layout = ao.simple.settings_layout.node
-    
+
     settings_layout.innerText = JSON.stringify(data.last_event_report,null,2,true)
 
     let settings_change = ao.simple.settings_change.node
@@ -13,7 +13,8 @@ function fill_data_displays () {
 function assemble_data_receptor(){
     let container = ao.qq({
         "nodetype":"div",
-        "id":"error_report_data_input_contianer"
+        "id":"error_report_data_input_contianer",
+        "styles":["vertical_list"]
     })
     document.body.append(container)
 
