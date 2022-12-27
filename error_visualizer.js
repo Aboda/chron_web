@@ -1,6 +1,9 @@
 function fill_data_displays () {
     let data = JSON.parse(ao.simple.error_report_data_input.node.innerText)
+    console.log(data)
+
     let settings_layout = ao.simple.settings_layout.node
+    
     settings_layout.innerText = JSON.stringify(data.last_event_report,null,2,true)
 
     let settings_change = ao.simple.settings_change.node
@@ -8,17 +11,29 @@ function fill_data_displays () {
 }
 
 function assemble_data_receptor(){
-    document.body.append(
-        ao.qq({
-            "id":"error_report_data_input",
-            "nodetype":"div",
-            "contentEditable":true,
-            "styles":["data_input"],
-            "triggers":[
-                ["keypress",()=>{fill_data_displays()}]
-            ]
-        })
-    )
+    let container = ao.qq({
+        "nodetype":"div",
+        "id":"error_report_data_input_contianer"
+    })
+    document.body.append(container)
+
+    let receptor = ao.qq({
+        "id":"error_report_data_input",
+        "nodetype":"div",
+        "contentEditable":true,
+        "styles":["data_input"],
+        
+    })
+    container.append(receptor)
+
+    let go_button = ao.qq({
+        "nodetype":"button",
+        "value":"read data",
+        "triggers":[
+            ["click",()=>{fill_data_displays()}]
+        ]
+    })
+    container.append(go_button)
 }
 
 function assemble_settings_display(){
