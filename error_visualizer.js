@@ -19,6 +19,16 @@ function assemble_data_receptor(){
     })
     document.body.append(container)
 
+    let go_button = ao.qq({
+        "id":"ingest_button",
+        "nodetype":"button",
+        "value":"read data",
+        "triggers":[
+            ["click",()=>{fill_data_displays()}]
+        ]
+    })
+    container.append(go_button)
+
     let receptor = ao.qq({
         "id":"error_report_data_input",
         "nodetype":"div",
@@ -27,15 +37,6 @@ function assemble_data_receptor(){
         
     })
     container.append(receptor)
-
-    let go_button = ao.qq({
-        "nodetype":"button",
-        "value":"read data",
-        "triggers":[
-            ["click",()=>{fill_data_displays()}]
-        ]
-    })
-    container.append(go_button)
 }
 
 function assemble_settings_display(){
@@ -43,7 +44,7 @@ function assemble_settings_display(){
         ao.qq({
             "id":"settings_layout",
             "nodetype":"div",
-            "styles":["parsed_json_text"]
+            "styles":["vertical_list"]
         })
     )
 }
@@ -53,7 +54,7 @@ function assemble_settings_display(){
         ao.qq({
             "id":"settings_change",
             "nodetype":"div",
-            "styles":["parsed_json_text"]
+            "styles":["vertical_list"]
         })
     )
 }
