@@ -2,13 +2,15 @@ function fill_data_displays () {
     let data = JSON.parse(ao.simple.error_report_data_input.node.innerText)
     console.log(data)
 
+    
     let settings_layout = ao.simple.settings_layout.node
-
-
-    settings_layout.innerText = JSON.stringify(data.last_event_report,null,2,true)
-
     let settings_change = ao.simple.settings_change.node
-    settings_change.innerText = JSON.stringify(data.last_event_settings_change,null,2,true)
+    console.log(settings_layout,settings_change)
+    
+    /*
+        settings_layout.innerText = JSON.stringify(data.last_event_report,null,2,true)
+        settings_change.innerText = JSON.stringify(data.last_event_settings_change,null,2,true)
+    */
 }
 
 function assemble_data_receptor(){
