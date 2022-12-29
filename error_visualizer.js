@@ -1,3 +1,13 @@
+function build_base_display(){
+    document.body.append(
+        ao.qq({
+            "nodetype":"div",
+            "id":"main_container",
+            "styles":["vertical_list"]
+        })
+    )
+}
+
 function fill_data_displays () {
     let data = JSON.parse(ao.simple.error_report_data_input.node.innerText)
     console.log(data)
@@ -5,21 +15,31 @@ function fill_data_displays () {
     
     let settings_layout = ao.simple.settings_layout.node
     let settings_change = ao.simple.settings_change.node
+    
     console.log(settings_layout,settings_change)
     
-    /*
-        settings_layout.innerText = JSON.stringify(data.last_event_report,null,2,true)
-        settings_change.innerText = JSON.stringify(data.last_event_settings_change,null,2,true)
-    */
+    settings_layout.innerText = JSON.stringify(data.last_event_report,null,2,true)
+    settings_change.innerText = JSON.stringify(data.last_event_settings_change,null,2,true)
+ 
 }
 
 function assemble_data_receptor(){
-    let container = ao.qq({
+
+    let section_container =  ao.qq({
         "nodetype":"div",
-        "id":"error_report_data_input_container",
-        "styles":["vertical_list"]
+        "id":"data_receptor_container",
+        "styles":["horizontal_list"]
     })
-    document.body.append(container)
+    ao.simple.main_container.node.append(section_container)
+
+    let receptor = ao.qq({
+        "id":"error_report_data_input",
+        "nodetype":"div",
+        "contentEditable":true,
+        "styles":["data_input"],
+        
+    })
+    section_container.append(receptor)
 
     let go_button = ao.qq({
         "id":"ingest_button",
@@ -29,16 +49,9 @@ function assemble_data_receptor(){
             ["click",()=>{fill_data_displays()}]
         ]
     })
-    container.append(go_button)
+    section_container.append(go_button)
 
-    let receptor = ao.qq({
-        "id":"error_report_data_input",
-        "nodetype":"div",
-        "contentEditable":true,
-        "styles":["data_input"],
-        
-    })
-    container.append(receptor)
+
 }
 
 function assemble_settings_display(){
@@ -51,7 +64,7 @@ function assemble_settings_display(){
     )
 }
 
-function assemble_settings_display(){
+function assemble_settings_change(){
     document.body.append(
         ao.qq({
             "id":"settings_change",
@@ -84,6 +97,7 @@ function assemble_availability_map(){
 function page_build(){
     assemble_data_receptor()
     assemble_settings_display()
+    assemble_settings_change()
     assemble_events_pool()
     assemble_availability_map()
 }
