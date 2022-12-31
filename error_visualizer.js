@@ -11,7 +11,7 @@ function assemble_data_receptor(){
         "id":"data_receptor_container",
         "styles":["hor_flex","card25x14"]
     })
-    main_container.node.append(section_container)
+    main_container.append(section_container)
 
     let receptor = ao.qq({
         "id":"error_report_data_input",
