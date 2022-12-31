@@ -59,8 +59,8 @@ function fill_data_displays() {
     ao.simple.ingest_button.node.disabled = true
     ao.simple.reset_button.node.disabled = false
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
-    ao.simple.main_container.node.append(assemble_settings_display(data))
-    ao.simple.main_container.node.append(assemble_events_display(data))
+    ao.simple.main_container.node.append(build_time_references_1(data))
+
     for (let item in data.last_event_report){
         ao.simple.main_container.node.append(build_essential_card(item+": ",JSON.stringify(data.last_event_report[item])))
     }
@@ -85,56 +85,49 @@ function build_essential_card(title,content){
     return basic_card_base
 }
 
+function build_mini_card(title,content){
+    let basic_card_base = ao.qq({
+        "nodetype":"div",
+        "styles":["hor_flex","main_table"]
+    })
+
+    basic_card_base.append(ao.qq({
+        "nodetype":"b",
+        "innerText":title
+    }))
+
+    basic_card_base.append(ao.qq({
+        "nodetype":"p",
+        "innerText":content
+    }))
+
+    return basic_card_base
+}
+
 function build_datapacket_resume(data, data_lenght){
     let container = ao.qq({
         "nodetype":"div",
         "id":"datapacket_resume",
         "styles":["vertical_list","card25x14"]
     })
+    container.append(build_mini_card("characters",data_lenght))
+    container.append(build_mini_card("version",data.last_event_report.version))
+    container.append(build_mini_card("email",data.last_event_report.email))
+    container.append(build_mini_card("load_event",data.last_event_report.load_event))
+    return container
+}
 
-    let packet_size_display = ao.qq({
-        "nodetype":"div",
-        "id":"packet_size_display",
-        "styles":["hor_flex"],
-        "innerText":data_lenght + " Characters"
-    })
-    container.append(packet_size_display)
 
-    let version_display = ao.qq({
+function build_time_references_1 (data){
+    let container = ao.qq({
         "nodetype":"div",
-        "id":"version_display",
-        "styles":["hor_flex"],
-        "innerText":data.last_event_report.version
+        "id":"datapacket_resume",
+        "styles":["vertical_list","card25x14"]
     })
-    container.append(version_display)
-    let email_display = ao.qq({
-        "nodetype":"div",
-        "id":"email_display",
-        "styles":["hor_flex"],
-        "innerText":data.last_event_report.email
-    })
-    container.append(email_display)
-    let load_event_display = ao.qq({
-        "nodetype":"div",
-        "id":"load_event_display",
-        "styles":["hor_flex"],
-        "innerText":data.last_event_report.load_event
-    })
-    container.append(load_event_display)
-    let first_sigth_display = ao.qq({
-        "nodetype":"div",
-        "id":"first_sigth_display",
-        "styles":["hor_flex"],
-        "innerText":data.last_event_report.first_connection
-    })
-    container.append(first_sigth_display)
-    let this_sigth_display = ao.qq({
-        "nodetype":"div",
-        "id":"this_sigth_display",
-        "styles":["hor_flex"],
-        "innerText":data.last_event_report.last_connection
-    })
-    container.append(this_sigth_display)
+    container.append(build_mini_card("first_connection",data.last_event_report.first_connection))
+    container.append(build_mini_card("last_connection",data.last_event_report.last_connection))
+    container.append(build_mini_card("script_user_timezone",data.last_event_report.script_user_timezone))
+    container.append(build_mini_card("script_user_offset",data.last_event_report.script_user_offset))
     return container
 }
 
