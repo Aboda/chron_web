@@ -250,10 +250,10 @@ function build_time_visualizer(data){
         
         console.log(day_timestamps)
 
-        day_block.append({
+        day_block.append(ao.qq({
             "nodetype":"b",
             "innerText": day_timestamps
-        })
+        }))
 
         let hour_breaker = 60
         let counter = 0
