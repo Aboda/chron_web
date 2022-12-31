@@ -235,7 +235,8 @@ function build_time_visualizer(data){
     for (let day_array of base_array) {
 
         let day_block = ao.qq({
-            "nodetype":"div"
+            "nodetype":"div",
+            "styles":["vertical_list"]
         })
         container.append(day_block)
 
@@ -251,7 +252,8 @@ function build_time_visualizer(data){
             
             if (counter == 0){
                 current_hour_graphic = ao.qq({
-                    "nodetype":"div"
+                    "nodetype":"div",
+                    "styles":["hor_flex"]
                 })
 
                 day_block.append(current_hour_graphic)
