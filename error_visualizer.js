@@ -244,7 +244,7 @@ function build_time_visualizer(data){
         
         console.log(date_array[prog],specific_timeframe_array[prog][0],specific_timeframe_array[prog][1])
 
-        let day_timestamps = date_array[prog] + " " + specific_timeframe_array[prog][0] + " " + specific_timeframe_array[prog][1]
+        let day_timestamps = String(date_array[prog]) + " " + String(specific_timeframe_array[prog][0]) + " " + String(specific_timeframe_array[prog][1])
 
         console.log(day_timestamps)
 
