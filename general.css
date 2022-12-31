@@ -189,4 +189,6 @@ a:active {
 .basic_display_card{
     border-style: groove;
     border-width: .25rem;
+    padding: 1rem;
+    margin: 1rem;
 }
