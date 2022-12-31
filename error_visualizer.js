@@ -57,6 +57,7 @@ function fill_data_displays() {
     mc.append(build_essential_card("output",data.last_event_report.output))
     mc.append(build_time_references_2(data))
     mc.append(build_days_card(data))
+    mc.append(build_time_references_3(data))
 
     let exclusion_list = {
         "version":true,
@@ -69,7 +70,13 @@ function fill_data_displays() {
         "output":true,
         "duration":true,
         "hour_frame":true,
-        "date_frame":true
+        "date_frame":true,
+        "weekdays":true,
+        "dotw":true,
+        "ts_instant":true,
+        "target_timezone":true,
+        "target_offset":true,
+        "luo":true        
     }
 
     for (let item in data.last_event_report){
@@ -118,7 +125,19 @@ function build_time_references_2 (data){
     return container
 }
 
+function build_time_references_3 (data){
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["vertical_list","card25x14"]
+    })
 
+    container.append(build_mini_card("ts_instant",data.last_event_report.date_frame.end))
+    container.append(build_mini_card("target_timezone",data.last_event_report.target_timezone))
+    container.append(build_mini_card("target_offset",data.last_event_report.target_offset))
+    container.append(build_mini_card("luo",data.last_event_report.date_frame.start))
+
+    return container
+}
 
 function build_days_card(data){
     let dotw_container = ao.qq({
@@ -131,7 +150,7 @@ function build_days_card(data){
         dotw_container.append(
             ao.qq({
                 "nodetype":"p",
-                "innerText":ordered_day + " "+rewrite_boolean(data.last_event_report.dotw[ordered_day],"Consider","Ignore")
+                "innerText":ordered_day + " "+rewrite_boolean(data.last_event_report.dotw[ordered_day],"\u2713","\u274c")
             })
         )
     }
