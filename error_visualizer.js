@@ -53,11 +53,38 @@ function fill_data_displays() {
     let input_text = ao.simple.error_report_data_input.node.innerText
     let data_length = input_text.length
     let data = JSON.parse(input_text)
+    console.log(Object.keys(data))
     console.log(data)
+    ao.simple.ingest_button.node.disabled = true
     ao.simple.reset_button.node.disabled = false
+    
+    for (let item in data.last_event_report){
+        ao.simple.main_container.node.append(build_essential_card(item,JSON.stringify(data.last_event_report[items])))
+    }
+    /*
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
     ao.simple.main_container.node.append(assemble_settings_display(data))
     ao.simple.main_container.node.append(assemble_events_display(data))
+    */
+}
+
+function build_essential_card(title,content){
+    let basic_card_base = ao.qq({
+        "nodetype":"div",
+        "styles":["hor_flex","basic_display_card"]
+    })
+
+    basic_card_base.append(ao.qq({
+        "nodetype":"b",
+        "innerText":title
+    }))
+
+    basic_card_base.append(ao.qq({
+        "nodetype":"p",
+        "innerText":content
+    }))
+
+    return basic_card_base
 }
 
 function build_datapacket_resume(data, data_lenght){
