@@ -53,10 +53,24 @@ function fill_data_displays() {
     ao.simple.reset_button.node.disabled = false
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
     ao.simple.main_container.node.append(build_time_references_1(data))
-    ao.simple.main_container.node.append(build_output_display(data))
+    ao.simple.main_container.node.append(build_essential_card("output",data.last_event_report.output))
+
+
+    let exclusion_list = {
+        "version":true,
+        "email":true,
+        "load_event":true,
+        "first_connection":true,
+        "last_connection":true,
+        "script_user_timezone":true,
+        "script_user_offset":true,
+        "output":true
+    }
 
     for (let item in data.last_event_report){
-        ao.simple.main_container.node.append(build_essential_card(item+": ",JSON.stringify(data.last_event_report[item])))
+        if (exclusion_list[item] == undefined) {
+            ao.simple.main_container.node.append(build_essential_card(item+": ",JSON.stringify(data.last_event_report[item])))
+        }
     }
 }
 
@@ -81,17 +95,6 @@ function build_time_references_1 (data){
     container.append(build_mini_card("last_connection",data.last_event_report.last_connection))
     container.append(build_mini_card("script_user_timezone",data.last_event_report.script_user_timezone))
     container.append(build_mini_card("script_user_offset",data.last_event_report.script_user_offset))
-    return container
-}
-
-function build_output_display(data){
-    let container = ao.qq({
-        "nodetype":"div",
-        "styles":["vertical_list","card25x14"]
-    })
-
-    container.append(build_mini_card("output",data.last_event_report.output))
-
     return container
 }
 
