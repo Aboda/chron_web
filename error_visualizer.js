@@ -28,7 +28,7 @@ function assemble_data_receptor(){
     let section_container =  ao.qq({
         "nodetype":"div",
         "id":"data_receptor_container",
-        "styles":["horizontal_list"]
+        "styles":["hor_flex"]
     })
     ao.simple.main_container.node.append(section_container)
 
@@ -55,7 +55,7 @@ function assemble_data_receptor(){
 }
 
 function assemble_settings_display(){
-    document.body.append(
+    ao.simple.main_container.node.append(
         ao.qq({
             "id":"settings_layout",
             "nodetype":"div",
@@ -65,7 +65,7 @@ function assemble_settings_display(){
 }
 
 function assemble_settings_change(){
-    document.body.append(
+    ao.simple.main_container.node.append(
         ao.qq({
             "id":"settings_change",
             "nodetype":"div",
@@ -75,7 +75,7 @@ function assemble_settings_change(){
 }
 
 function assemble_events_pool(){
-    document.body.append(
+    ao.simple.main_container.node.append(
         ao.qq({
             "id":"events_list",
             "nodetype":"div",
@@ -85,7 +85,7 @@ function assemble_events_pool(){
 }
 
 function assemble_availability_map(){
-    document.body.append(
+    ao.simple.main_container.node.append(
         ao.qq({
             "id":"availability_map",
             "nodetype":"div",
