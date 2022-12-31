@@ -53,11 +53,15 @@ function fill_data_displays() {
     ao.simple.ingest_button.node.disabled = true
     ao.simple.reset_button.node.disabled = false
     mc.append(build_datapacket_resume(data,data_length))
-    mc.append(build_time_references_1(data))
     mc.append(build_essential_card("output",data.last_event_report.output))
+    mc.append(build_time_references_1(data))
     mc.append(build_time_references_2(data))
-    mc.append(build_days_card(data))
     mc.append(build_time_references_3(data))
+
+    mc.append(build_days_card(data))
+    mc.append(build_status_card(data))
+    mc.append(build_calendars_card(data))
+
 
     let exclusion_list = {
         "version":true,
@@ -140,14 +144,13 @@ function build_time_references_3 (data){
 }
 
 function build_days_card(data){
-    let dotw_container = ao.qq({
-        "id":"dotw_container",
+    let container = ao.qq({
         "nodetype":"div",
         "styles":["vertical_list","basic_display_card"]
     })
 
     for (let ordered_day of data.last_event_report.weekdays) {
-        dotw_container.append(
+        container.append(
             ao.qq({
                 "nodetype":"p",
                 "innerText":ordered_day + " "+rewrite_boolean(data.last_event_report.dotw[ordered_day],"\u2713","\u274c")
@@ -155,7 +158,43 @@ function build_days_card(data){
         )
     }
 
-    return dotw_container
+    return container
+}
+
+function build_status_card(data){
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["vertical_list","basic_display_card"]
+    })
+
+    for (let status in data.last_event_report.guest_status) {
+        container.append(
+            ao.qq({
+                "nodetype":"p",
+                "innerText":status + " " + rewrite_boolean(data.last_event_report.guest_status[status],"\u2713","\u274c")
+            })
+        )
+    }
+
+    return container
+}
+
+function build_calendars_card(data){
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["vertical_list","basic_display_card"]
+    })
+
+    for (let calendar in data.last_event_report.blocking_calendars) {
+        container.append(
+            ao.qq({
+                "nodetype":"p",
+                "innerText":data.last_event_report.blocking_calendars[calendar].name + " " + rewrite_boolean(data.last_event_report.blocking_calendars[calendar].blocking,"\u2713","\u274c") + "\n" + calendar
+            })
+        )
+    }
+
+    return container
 }
 
 function rewrite_boolean(boolean,value_if_true,value_if_else){
