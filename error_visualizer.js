@@ -1,21 +1,17 @@
-function build_base_display(){
-    document.body.append(
-        ao.qq({
-            "nodetype":"div",
-            "id":"main_container",
-            "styles":["hor_flex"]
-        })
-    )
-}
-
 function assemble_data_receptor(){
+    let main_container = ao.qq({
+        "nodetype":"div",
+        "id":"main_container",
+        "styles":["hor_flex"]
+    })
+    document.body.append(main_container)
 
     let section_container =  ao.qq({
         "nodetype":"div",
         "id":"data_receptor_container",
         "styles":["hor_flex","card25x14"]
     })
-    ao.simple.main_container.node.append(section_container)
+    main_container.node.append(section_container)
 
     let receptor = ao.qq({
         "id":"error_report_data_input",
@@ -46,62 +42,22 @@ function assemble_data_receptor(){
         ]
     })
     section_container.append(reset_button)
-
 }
 
 function fill_data_displays() {
     let input_text = ao.simple.error_report_data_input.node.innerText
     let data_length = input_text.length
     let data = JSON.parse(input_text)
-    console.log(Object.keys(data.last_event_report))
-    console.log(Object.keys(data.last_event_settings_change))
     console.log(data)
     ao.simple.ingest_button.node.disabled = true
     ao.simple.reset_button.node.disabled = false
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
     ao.simple.main_container.node.append(build_time_references_1(data))
+    ao.simple.main_container.node.append(build_output_display(data))
 
     for (let item in data.last_event_report){
         ao.simple.main_container.node.append(build_essential_card(item+": ",JSON.stringify(data.last_event_report[item])))
     }
-}
-
-function build_essential_card(title,content){
-    let basic_card_base = ao.qq({
-        "nodetype":"div",
-        "styles":["hor_flex","basic_display_card"]
-    })
-
-    basic_card_base.append(ao.qq({
-        "nodetype":"b",
-        "innerText":title
-    }))
-
-    basic_card_base.append(ao.qq({
-        "nodetype":"p",
-        "innerText":content
-    }))
-
-    return basic_card_base
-}
-
-function build_mini_card(title,content){
-    let basic_card_base = ao.qq({
-        "nodetype":"div",
-        "styles":["hor_flex","main_table"]
-    })
-
-    basic_card_base.append(ao.qq({
-        "nodetype":"b",
-        "innerText":title
-    }))
-
-    basic_card_base.append(ao.qq({
-        "nodetype":"p",
-        "innerText":content
-    }))
-
-    return basic_card_base
 }
 
 function build_datapacket_resume(data, data_lenght){
@@ -109,13 +65,12 @@ function build_datapacket_resume(data, data_lenght){
         "nodetype":"div",
         "styles":["vertical_list","card25x14"]
     })
-    container.append(build_mini_card("characters",data_lenght))
     container.append(build_mini_card("version",data.last_event_report.version))
     container.append(build_mini_card("email",data.last_event_report.email))
     container.append(build_mini_card("load_event",data.last_event_report.load_event))
+    container.append(build_mini_card("characters",data_lenght))
     return container
 }
-
 
 function build_time_references_1 (data){
     let container = ao.qq({
@@ -126,6 +81,17 @@ function build_time_references_1 (data){
     container.append(build_mini_card("last_connection",data.last_event_report.last_connection))
     container.append(build_mini_card("script_user_timezone",data.last_event_report.script_user_timezone))
     container.append(build_mini_card("script_user_offset",data.last_event_report.script_user_offset))
+    return container
+}
+
+function build_output_display(data){
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["vertical_list","card25x14"]
+    })
+
+    container.append(build_mini_card("output",data.last_event_report.output))
+
     return container
 }
 
@@ -251,11 +217,44 @@ function assemble_availability_map(){
     )
 }
 
-function page_build(){
-    build_base_display()
-    assemble_data_receptor()
+function build_essential_card(title,content){
+    let basic_card_base = ao.qq({
+        "nodetype":"div",
+        "styles":["hor_flex","basic_display_card"]
+    })
+
+    basic_card_base.append(ao.qq({
+        "nodetype":"b",
+        "innerText":title
+    }))
+
+    basic_card_base.append(ao.qq({
+        "nodetype":"p",
+        "innerText":content
+    }))
+
+    return basic_card_base
+}
+
+function build_mini_card(title,content){
+    let basic_card_base = ao.qq({
+        "nodetype":"div",
+        "styles":["hor_flex","main_table"]
+    })
+
+    basic_card_base.append(ao.qq({
+        "nodetype":"b",
+        "innerText":title
+    }))
+
+    basic_card_base.append(ao.qq({
+        "nodetype":"p",
+        "innerText":content
+    }))
+
+    return basic_card_base
 }
 
 window.onload = () => {
-    page_build()
+    assemble_data_receptor()
 }
