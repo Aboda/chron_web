@@ -224,6 +224,8 @@ function build_events_card(data){
 
 function build_time_visualizer(data){
     let base_array = data.last_event_report.slotted_timeframe_array
+    let date_array = data.last_event_report.date_array
+    let specific_timeframe_array = data.last_event_report.specific_timeframe_array
 
     let container = ao.qq({
         "nodetype":"div",
@@ -236,9 +238,14 @@ function build_time_visualizer(data){
 
         let day_block = ao.qq({
             "nodetype":"div",
-            "styles":["vertical_list"]
+            "styles":["vertical_list","basic_display_card"]
         })
         container.append(day_block)
+
+        day_block.append({
+            "nodetype":"b",
+            "innerText":date_array[prog] + " " + specific_timeframe_array[prog][0] + " " + specific_timeframe_array[prog][1]
+        })
 
         let hour_breaker = 60
         let counter = 0
