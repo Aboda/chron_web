@@ -83,7 +83,10 @@ function fill_data_displays() {
         "luo":true,
         "guest_status":true,
         "blocking_calendars":true,
-        "events_from_blocking_calendars":true
+        "events_from_blocking_calendars":true,
+        "date_array":true,
+        "specific_timeframe_array":true,
+        "slotted_timeframe_array":true
     }
 
     for (let item in data.last_event_report){

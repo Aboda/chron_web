@@ -196,10 +196,14 @@ a:active {
 .yesblock{
     width: .4rem;
     height: .4rem;
+    margin-top: .125rem;
+    margin-bottom: .125rem;
     background-color: rgb(0,255,0);
 }
 .noblock{
     width: .4rem;
     height: .4rem;
+    margin-top: .125rem;
+    margin-bottom: .125rem;
     background-color: rgb(255,0,0);
 }
