@@ -57,11 +57,10 @@ function fill_data_displays() {
     mc.append(build_time_references_1(data))
     mc.append(build_time_references_2(data))
     mc.append(build_time_references_3(data))
-
     mc.append(build_days_card(data))
     mc.append(build_status_card(data))
     mc.append(build_calendars_card(data))
-
+    mc.append(build_events_card(data))
 
     let exclusion_list = {
         "version":true,
@@ -80,7 +79,9 @@ function fill_data_displays() {
         "ts_instant":true,
         "target_timezone":true,
         "target_offset":true,
-        "luo":true        
+        "luo":true,
+        "guest_status":true,
+        "blocking_calendars":true
     }
 
     for (let item in data.last_event_report){
@@ -196,6 +197,77 @@ function build_calendars_card(data){
 
     return container
 }
+
+function build_events_card(data){
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["vertical_list","basic_display_card"]
+    })
+
+    for (let event in data.last_event_report.events_from_blocking_calendars) {
+        let subcont = ao.qq({
+            "nodetype":"div",
+            "innerText":event
+        })
+        container.append(subcont)
+        for (let fact in data.last_event_report.events_from_blocking_calendars[event]) {
+            subcont.append(container.append(build_mini_card(fact,data.last_event_report.events_from_blocking_calendars[event][fact])))
+        }
+    }
+
+    return container
+}
+
+function build_time_visualizer(data){
+    let base_array = data.last_event_report.slotted_timeframe_array
+
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["vertical_list","basic_display_card"]
+    })
+
+    let prog = 0
+
+    for (let day_array of base_array) {
+
+        let day_block = ao.qq({
+            "nodetype":"div"
+        })
+        container.append(day_block)
+
+        let hour_breaker = 60
+        let counter = 0
+        let current_hour_graphic
+
+        for (let minute of day_array) {
+            
+            if (counter == hour_breaker){
+                counter = 0
+            }
+            
+            if (counter == 0){
+                current_hour_graphic = ao.qq({
+                    "nodetype":"div"
+                })
+
+                day_block.append(current_hour_graphic)
+            }
+
+            counter++
+
+            current_hour_graphic.append(rewrite_boolean(
+                minute,
+                ()=>{return ao.qq({"nodetype":"div","styles":["yesblock"]})},
+                ()=>{return ao.qq({"nodetype":"div","styles":["noblock"]})},
+            ))
+        }
+
+        prog++
+    }
+
+    return container
+}
+
 
 function rewrite_boolean(boolean,value_if_true,value_if_else){
     if (boolean) {
