@@ -61,6 +61,7 @@ function fill_data_displays() {
     mc.append(build_status_card(data))
     mc.append(build_calendars_card(data))
     mc.append(build_events_card(data))
+    mc.append(build_time_visualizer(data))
 
     let exclusion_list = {
         "version":true,
@@ -81,7 +82,8 @@ function fill_data_displays() {
         "target_offset":true,
         "luo":true,
         "guest_status":true,
-        "blocking_calendars":true
+        "blocking_calendars":true,
+        "events_from_blocking_calendars":true
     }
 
     for (let item in data.last_event_report){
@@ -210,8 +212,9 @@ function build_events_card(data){
             "innerText":event
         })
         container.append(subcont)
+
         for (let fact in data.last_event_report.events_from_blocking_calendars[event]) {
-            subcont.append(container.append(build_mini_card(fact,data.last_event_report.events_from_blocking_calendars[event][fact])))
+            subcont.append(build_mini_card(fact,data.last_event_report.events_from_blocking_calendars[event][fact]))
         }
     }
 
