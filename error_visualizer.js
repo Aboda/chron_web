@@ -136,7 +136,7 @@ function build_days_card(data){
         )
     }
 
-    return
+    return dotw_container
 }
 
 function rewrite_boolean(boolean,value_if_true,value_if_else){
