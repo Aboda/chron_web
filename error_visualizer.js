@@ -3,7 +3,7 @@ function build_base_display(){
         ao.qq({
             "nodetype":"div",
             "id":"main_container",
-            "styles":["vertical_list"]
+            "styles":["hor_flex"]
         })
     )
 }
@@ -54,13 +54,13 @@ function fill_data_displays() {
         This breaks down the information on the support packet into teh different
         displays
     */
-    let data_length = ao.simple.error_report_data_input.node.innerText.data_length
-    let data = JSON.parse(ao.simple.error_report_data_input.node.innerText)
+    let input_text = ao.simple.error_report_data_input.node.innerText
+    let data_length = input_text.length
+    let data = JSON.parse(input_text)
     
     ao.simple.reset_button.node.disabled = false
 
-    ao.simple.data_receptor_container.node.append(build_datapacket_resume(data,data_length))
-    
+    ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
     ao.simple.main_container.node.append(assemble_settings_display(data))
     ao.simple.main_container.node.append(assemble_events_display(data))
 }
