@@ -59,7 +59,7 @@ function fill_data_displays() {
     ao.simple.reset_button.node.disabled = false
     
     for (let item in data.last_event_report){
-        ao.simple.main_container.node.append(build_essential_card(item,JSON.stringify(data.last_event_report[items])))
+        ao.simple.main_container.node.append(build_essential_card(item,JSON.stringify(data.last_event_report[item])))
     }
     /*
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
