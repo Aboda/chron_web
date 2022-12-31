@@ -60,7 +60,6 @@ function fill_data_displays() {
     mc.append(build_days_card(data))
     mc.append(build_status_card(data))
     mc.append(build_calendars_card(data))
-    mc.append(build_events_card(data))
     mc.append(build_time_visualizer(data))
 
     let exclusion_list = {
@@ -94,6 +93,8 @@ function fill_data_displays() {
             ao.simple.main_container.node.append(build_essential_card(item+": ",JSON.stringify(data.last_event_report[item])))
         }
     }
+
+    mc.append(build_events_card(data))
 }
 
 function build_datapacket_resume(data, data_lenght){
