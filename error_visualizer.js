@@ -209,7 +209,8 @@ function build_events_card(data){
     for (let event in data.last_event_report.events_from_blocking_calendars) {
         let subcont = ao.qq({
             "nodetype":"div",
-            "innerText":event
+            "innerText":event,
+            "styles":["basic_display_card"]
         })
         container.append(subcont)
 
@@ -260,8 +261,8 @@ function build_time_visualizer(data){
 
             current_hour_graphic.append(rewrite_boolean(
                 minute,
-                ()=>{return ao.qq({"nodetype":"div","styles":["yesblock"]})},
-                ()=>{return ao.qq({"nodetype":"div","styles":["noblock"]})},
+                ao.qq({"nodetype":"div","styles":["yesblock"]}),
+                ao.qq({"nodetype":"div","styles":["noblock"]}),
             ))
         }
 
