@@ -28,7 +28,7 @@ function assemble_data_receptor(){
     let section_container =  ao.qq({
         "nodetype":"div",
         "id":"data_receptor_container",
-        "styles":["hor_flex"]
+        "styles":["hor_flex","input_card_1"]
     })
     ao.simple.main_container.node.append(section_container)
 

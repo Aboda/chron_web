@@ -172,7 +172,16 @@ a:active {
 }
 
 .data_input{
-    width: 100%;
-    background-color: aquamarine;
+    width: 10rem;
+    height: 20rem;
+    background-color: (90,75,50);
     max-height: 10rem;
+    overflow-y: scroll;
+}
+
+.input_card_1{
+    width: 20rem;
+    height: 30rem;
+    border-style: groove;
+    border-width: .25rem;
 }
