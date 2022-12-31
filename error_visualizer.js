@@ -227,8 +227,6 @@ function build_time_visualizer(data){
     let date_array = data.last_event_report.date_array
     let specific_timeframe_array = data.last_event_report.specific_timeframe_array
     
-    console.log(date_array,specific_timeframe_array)
-
     let container = ao.qq({
         "nodetype":"div",
         "styles":["vertical_list","basic_display_card"]
@@ -244,7 +242,11 @@ function build_time_visualizer(data){
         })
         container.append(day_block)
         
+        console.log(date_array[prog],specific_timeframe_array[prog][0],specific_timeframe_array[prog][1])
+
         let day_timestamps = date_array[prog] + " " + specific_timeframe_array[prog][0] + " " + specific_timeframe_array[prog][1]
+
+        console.log(day_timestamps)
 
         day_block.append({
             "nodetype":"b",
