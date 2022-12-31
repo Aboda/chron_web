@@ -186,5 +186,7 @@ function build_mini_card(title,content){
 }
 
 window.onload = () => {
+    build_headbar()
     assemble_data_receptor()
+    build_closer_line()    
 }
