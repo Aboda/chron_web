@@ -174,13 +174,13 @@ a:active {
 .data_input{
     width: 15rem;
     height: 10rem;
-    background-color: rgb(90,75,50);
+    background-color: rgb(255, 235, 200);
     max-height: 10rem;
     overflow-y: scroll;
 }
 
 .input_card_1{
-    width: 19rem;
+    width: 25rem;
     height: 14rem;
     border-style: groove;
     border-width: .25rem;
