@@ -241,10 +241,12 @@ function build_time_visualizer(data){
             "styles":["vertical_list","basic_display_card"]
         })
         container.append(day_block)
+        
+        let day_timestamps = date_array[prog] + " " + specific_timeframe_array[prog][0] + " " + specific_timeframe_array[prog][1]
 
         day_block.append({
             "nodetype":"b",
-            "innerText":date_array[prog] + " " + specific_timeframe_array[prog][0] + " " + specific_timeframe_array[prog][1]
+            "innerText": day_timestamps
         })
 
         let hour_breaker = 60
