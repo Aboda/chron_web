@@ -226,6 +226,8 @@ function build_time_visualizer(data){
     let base_array = data.last_event_report.slotted_timeframe_array
     let date_array = data.last_event_report.date_array
     let specific_timeframe_array = data.last_event_report.specific_timeframe_array
+    
+    console.log(date_array,specific_timeframe_array)
 
     let container = ao.qq({
         "nodetype":"div",
