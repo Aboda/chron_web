@@ -54,6 +54,7 @@ function fill_data_displays() {
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
     ao.simple.main_container.node.append(build_time_references_1(data))
     ao.simple.main_container.node.append(build_essential_card("output",data.last_event_report.output))
+    ao.simple.main_container.node.append(build_time_references_2(data))
 
 
     let exclusion_list = {
@@ -95,6 +96,21 @@ function build_time_references_1 (data){
     container.append(build_mini_card("last_connection",data.last_event_report.last_connection))
     container.append(build_mini_card("script_user_timezone",data.last_event_report.script_user_timezone))
     container.append(build_mini_card("script_user_offset",data.last_event_report.script_user_offset))
+    return container
+}
+
+function build_time_references_2 (data){
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["vertical_list","card25x14"]
+    })
+    let hour_frame_nice = data.last_event_report.hour_frame.start.hours + ":"+data.last_event_report.hour_frame.start.minutes + " -> " + data.last_event_report.hour_frame.end.hours + ":"+data.last_event_report.hour_frame.end.minutes
+
+
+    container.append(build_mini_card("duration",data.last_event_report.duration))
+    container.append(build_mini_card("hour_frame",hour_frame_nice))
+    container.append(build_mini_card("date_frame(start)",data.last_event_report.date_frame.start))
+    container.append(build_mini_card("date_frame(end)",data.last_event_report.date_frame.end))
     return container
 }
 
