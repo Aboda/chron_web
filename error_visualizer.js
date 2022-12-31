@@ -53,13 +53,14 @@ function fill_data_displays() {
     let input_text = ao.simple.error_report_data_input.node.innerText
     let data_length = input_text.length
     let data = JSON.parse(input_text)
-    console.log(Object.keys(data))
+    console.log(Object.keys(data.last_event_report))
+    console.log(Object.keys(data.last_event_settings_change))
     console.log(data)
     ao.simple.ingest_button.node.disabled = true
     ao.simple.reset_button.node.disabled = false
     
     for (let item in data.last_event_report){
-        ao.simple.main_container.node.append(build_essential_card(item,JSON.stringify(data.last_event_report[item])))
+        ao.simple.main_container.node.append(build_essential_card(item,": "+JSON.stringify(data.last_event_report[item])))
     }
     /*
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
