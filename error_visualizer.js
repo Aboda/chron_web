@@ -107,7 +107,6 @@ function build_mini_card(title,content){
 function build_datapacket_resume(data, data_lenght){
     let container = ao.qq({
         "nodetype":"div",
-        "id":"datapacket_resume",
         "styles":["vertical_list","card25x14"]
     })
     container.append(build_mini_card("characters",data_lenght))
@@ -121,7 +120,6 @@ function build_datapacket_resume(data, data_lenght){
 function build_time_references_1 (data){
     let container = ao.qq({
         "nodetype":"div",
-        "id":"datapacket_resume",
         "styles":["vertical_list","card25x14"]
     })
     container.append(build_mini_card("first_connection",data.last_event_report.first_connection))
