@@ -26,6 +26,7 @@ const ao = {
     "simple":{},
     "node_flattener":{
       "a":true,
+      "b":true,
       "button":"input",
       "checkbox":"input",
       "date":"input",

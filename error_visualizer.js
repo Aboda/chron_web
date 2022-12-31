@@ -13,7 +13,7 @@ function assemble_data_receptor(){
     let section_container =  ao.qq({
         "nodetype":"div",
         "id":"data_receptor_container",
-        "styles":["hor_flex","input_card_1"]
+        "styles":["hor_flex","card25x14"]
     })
     ao.simple.main_container.node.append(section_container)
 
@@ -58,15 +58,12 @@ function fill_data_displays() {
     console.log(data)
     ao.simple.ingest_button.node.disabled = true
     ao.simple.reset_button.node.disabled = false
-    
-    for (let item in data.last_event_report){
-        ao.simple.main_container.node.append(build_essential_card(item,": "+JSON.stringify(data.last_event_report[item])))
-    }
-    /*
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
     ao.simple.main_container.node.append(assemble_settings_display(data))
     ao.simple.main_container.node.append(assemble_events_display(data))
-    */
+    for (let item in data.last_event_report){
+        ao.simple.main_container.node.append(build_essential_card(item+": ",JSON.stringify(data.last_event_report[item])))
+    }
 }
 
 function build_essential_card(title,content){
@@ -92,8 +89,9 @@ function build_datapacket_resume(data, data_lenght){
     let container = ao.qq({
         "nodetype":"div",
         "id":"datapacket_resume",
-        "styles":["vertical_list"]
+        "styles":["vertical_list","card25x14"]
     })
+
     let packet_size_display = ao.qq({
         "nodetype":"div",
         "id":"packet_size_display",
@@ -144,7 +142,7 @@ function assemble_settings_display(data){
     let first_settings_container  = ao.qq({
         "id":"first_settings_container",
         "nodetype":"div",
-        "styles":["hor_flex"]
+        "styles":["hor_flex","card25x14"]
     })
 
     let dotw_container = ao.qq({
@@ -237,7 +235,7 @@ function assemble_settings_change(){
         ao.qq({
             "id":"settings_change",
             "nodetype":"div",
-            "styles":["vertical_list"]
+            "styles":["vertical_list","card25x14"]
         })
     )
 }
