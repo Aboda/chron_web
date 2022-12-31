@@ -50,16 +50,11 @@ function assemble_data_receptor(){
 }
 
 function fill_data_displays() {
-    /*
-        This breaks down the information on the support packet into teh different
-        displays
-    */
     let input_text = ao.simple.error_report_data_input.node.innerText
     let data_length = input_text.length
     let data = JSON.parse(input_text)
-    
+    console.log(data)
     ao.simple.reset_button.node.disabled = false
-
     ao.simple.main_container.node.append(build_datapacket_resume(data,data_length))
     ao.simple.main_container.node.append(assemble_settings_display(data))
     ao.simple.main_container.node.append(assemble_events_display(data))
@@ -189,7 +184,7 @@ function assemble_settings_display(data){
     })
     main_query_settings_container.append(target_offset_display)
 
-    return container
+    return first_settings_container
 }
 
 function assemble_events_display(data){
