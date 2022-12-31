@@ -242,10 +242,12 @@ function build_time_visualizer(data){
         })
         container.append(day_block)
         
-        console.log(date_array[prog],specific_timeframe_array[prog][0],specific_timeframe_array[prog][1])
-
-        let day_timestamps = String(date_array[prog]) + " " + String(specific_timeframe_array[prog][0]) + " " + String(specific_timeframe_array[prog][1])
-
+        let day = date_array[prog]
+        let starttime = specific_timeframe_array[prog][0]
+        let endtime = specific_timeframe_array[prog][1]
+        
+        let day_timestamps = "" + day + " " + starttime + " " + endtime
+        
         console.log(day_timestamps)
 
         day_block.append({
