@@ -242,10 +242,6 @@ function assemble_availability_map(){
 function page_build(){
     build_base_display()
     assemble_data_receptor()
-    assemble_settings_display()
-    assemble_settings_change()
-    assemble_events_pool()
-    assemble_availability_map()
 }
 
 window.onload = () => {
