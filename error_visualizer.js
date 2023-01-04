@@ -279,11 +279,10 @@ function build_time_visualizer(data){
             let evaluated_date = new Date(day).getTime()
             let next_date = new Date(date_array[prog+1]).getTime()
 
-            console.log(event_start,evaluated_date,next_date)
-            
+            console.log(events,event_start,evaluated_date,next_date)
             if (event_start <= evaluated_date) {
                 console.log("event within analisis range")
-                if (next_date == undefined || event_start >= next_date) {
+                if (next_date == NaN || event_start < next_date) {
                     console.log("event within day boundary")
                     day_block.append(build_single_event_card(events,thing))
                 }
@@ -293,7 +292,6 @@ function build_time_visualizer(data){
     }
     return container
 }
-
 
 function build_other_items(data) {
     let container = ao.qq({
@@ -334,6 +332,19 @@ function build_other_items(data) {
     }
 
     return container
+}
+
+/*
+
+    Before here, main page flow build, below here, general assistance functions
+
+*/
+
+
+window.onload = () => {
+    build_headbar()
+    assemble_data_receptor()
+    build_closer_line()    
 }
 
 function rewrite_boolean(boolean,value_if_true,value_if_else){
@@ -380,10 +391,4 @@ function build_mini_card(title,content){
     }))
 
     return basic_card_base
-}
-
-window.onload = () => {
-    build_headbar()
-    assemble_data_receptor()
-    build_closer_line()    
 }
