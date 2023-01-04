@@ -276,16 +276,19 @@ function build_time_visualizer(data){
             let thing = data.last_event_report.events_from_blocking_calendars[events]
 
             let event_start = new Date(thing.startTime).getTime()
+            let event_end = new Date(thing.endTime).getTime()
             let evaluated_date = new Date(day).getTime()
             let next_date = new Date(date_array[prog+1]).getTime()
 
+            if (next_date == undefined){
+                next_date = new Date(evaluated_date + (1000 * 60 * 60 * 24)).getTime()
+            }
+
             console.log(events,event_start,evaluated_date,next_date)
-            if (event_start <= evaluated_date) {
-                console.log("event within analisis range")
-                if (next_date == NaN || event_start < next_date) {
-                    console.log("event within day boundary")
-                    day_block.append(build_single_event_card(events,thing))
-                }
+
+            if (event_start >= evaluated_date && event_start < next_date) {
+                console.log("event within day boundary")
+                day_block.append(build_single_event_card(events,thing))
             }
         }
 
