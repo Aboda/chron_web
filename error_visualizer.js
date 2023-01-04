@@ -226,6 +226,20 @@ function build_events_card(data){
     return container
 }
 
+function build_single_event_card(event_id,event){
+    let container = ao.qq({
+        "nodetype":"div",
+        "innerText":event_id,
+        "styles":["basic_display_card"]
+    })
+
+    for (let fact in event) {
+        container.append(build_mini_card(fact,event[fact]))
+    }
+
+    return container
+}
+
 function build_time_visualizer(data){
     let base_array = data.last_event_report.slotted_timeframe_array
     let date_array = data.last_event_report.date_array
@@ -288,8 +302,17 @@ function build_time_visualizer(data){
         }
 
         prog++
-    }
 
+        for(let events in data.last_event_report.events_from_blocking_calendars){
+
+            let thing = data.last_event_report.events_from_blocking_calendars[events]
+            let start = new Date(thing.starttime)
+            
+            if (start >= new Date(day) && start < new Date(date_array[prog]+1)){
+                day_block.append(build_single_event_card(events,thing))
+            }
+        }
+    }
     return container
 }
 
