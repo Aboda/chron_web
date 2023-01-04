@@ -307,9 +307,9 @@ function build_time_visualizer(data){
 
             let thing = data.last_event_report.events_from_blocking_calendars[events]
 
-            let event_start = new Date(thing.starttime)
-            let evaluated_date = new Date(day)
-            let next_date = new Date(date_array[prog]+1)
+            let event_start = thing.starttime
+            let evaluated_date = day
+            let next_date = date_array[prog]+1
 
             console.log(event_start,evaluated_date,next_date)
             
