@@ -309,7 +309,7 @@ function build_time_visualizer(data){
 
             let event_start = new Date(thing.startTime).getTime()
             let evaluated_date = new Date(day).getTime()
-            let next_date = new Date(date_array[prog]+1).getTime()
+            let next_date = new Date(date_array[prog+1]).getTime()
 
             console.log(event_start,evaluated_date,next_date)
             
