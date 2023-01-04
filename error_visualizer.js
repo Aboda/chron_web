@@ -60,40 +60,8 @@ function fill_data_displays() {
     mc.append(build_days_card(data))
     mc.append(build_status_card(data))
     mc.append(build_calendars_card(data))
+    mc.append(build_other_items(data))
     mc.append(build_time_visualizer(data))
-
-    let exclusion_list = {
-        "version":true,
-        "email":true,
-        "load_event":true,
-        "first_connection":true,
-        "last_connection":true,
-        "script_user_timezone":true,
-        "script_user_offset":true,
-        "output":true,
-        "duration":true,
-        "hour_frame":true,
-        "date_frame":true,
-        "weekdays":true,
-        "dotw":true,
-        "ts_instant":true,
-        "target_timezone":true,
-        "target_offset":true,
-        "luo":true,
-        "guest_status":true,
-        "blocking_calendars":true,
-        "events_from_blocking_calendars":true,
-        "date_array":true,
-        "specific_timeframe_array":true,
-        "slotted_timeframe_array":true
-    }
-
-    for (let item in data.last_event_report){
-        if (exclusion_list[item] == undefined) {
-            ao.simple.main_container.node.append(build_essential_card(item+": ",JSON.stringify(data.last_event_report[item])))
-        }
-    }
-
     mc.append(build_events_card(data))
 }
 
@@ -326,6 +294,47 @@ function build_time_visualizer(data){
     return container
 }
 
+
+function build_other_items(data) {
+    let container = ao.qq({
+        "nodetype":"div",
+        "styles":["vertical_list","basic_display_card"]
+    })
+
+    let exclusion_list = {
+        "version":true,
+        "email":true,
+        "load_event":true,
+        "first_connection":true,
+        "last_connection":true,
+        "script_user_timezone":true,
+        "script_user_offset":true,
+        "output":true,
+        "duration":true,
+        "hour_frame":true,
+        "date_frame":true,
+        "weekdays":true,
+        "dotw":true,
+        "ts_instant":true,
+        "target_timezone":true,
+        "target_offset":true,
+        "luo":true,
+        "guest_status":true,
+        "blocking_calendars":true,
+        "events_from_blocking_calendars":true,
+        "date_array":true,
+        "specific_timeframe_array":true,
+        "slotted_timeframe_array":true
+    }
+
+    for (let item in data.last_event_report){
+        if (exclusion_list[item] == undefined) {
+            container.append(build_essential_card(item+": ",JSON.stringify(data.last_event_report[item])))
+        }
+    }
+
+    return container
+}
 
 function rewrite_boolean(boolean,value_if_true,value_if_else){
     if (boolean) {
