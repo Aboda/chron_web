@@ -306,12 +306,20 @@ function build_time_visualizer(data){
         for(let events in data.last_event_report.events_from_blocking_calendars){
 
             let thing = data.last_event_report.events_from_blocking_calendars[events]
-            let start = new Date(thing.starttime)
+
+            let event_start = new Date(thing.starttime)
+            let evaluated_date = new Date(day)
+            let next_date = new Date(date_array[prog]+1)
+
+            console.log(event_start,evaluated_date,next_date)
             
-            if (start >= new Date(day) && start < new Date(date_array[prog]+1)){
-                day_block.append(build_single_event_card(events,thing))
+            if (event_start <= evaluated_date) {
+                if (next_date == undefined || event_start >= next_date) {
+                    day_block.append(build_single_event_card(events,thing))
+                }
             }
         }
+
     }
     return container
 }
