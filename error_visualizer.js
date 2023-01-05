@@ -284,10 +284,7 @@ function build_time_visualizer(data){
                 next_date = new Date(evaluated_date + (1000 * 60 * 60 * 24)).getTime()
             }
 
-            console.log(events,event_start,evaluated_date,next_date)
-
             if (event_start >= evaluated_date && event_start < next_date) {
-                console.log("event within day boundary")
                 day_block.append(build_single_event_card(events,thing))
             }
         }
